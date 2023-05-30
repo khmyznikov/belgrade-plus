@@ -1,0 +1,37 @@
+.tickets-list{
+	display: flex;
+    flex-direction: column;
+    gap: 15px;
+	
+	dt {
+		font-family: Archivo;
+		font-size: 40px;
+		font-stretch: 85%;
+    	font-weight: 800;
+
+		position: sticky;
+		top: 0px;
+		background-color: white;
+		z-index: 1;
+		text-align: center;
+	}
+	dd{
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		& + dd{
+			.ticket::after {
+				filter: url("#ticket-texture-blue");
+			}
+		}
+		& + dd + dd{
+			.ticket::after {
+				filter: url("#ticket-texture-white");
+			}
+		}
+	}
+	bus-ticket{
+		display: contents;
+	}
+}
