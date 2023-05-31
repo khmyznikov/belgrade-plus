@@ -11,6 +11,9 @@ export class BusTicket extends LitElement {
 	// 	return [ styles ];
 	// }
 
+	@property() ticket: {zone: string, price: string, text: string} | null = null;
+	@property() period: string | null = null;
+
 	createRenderRoot() {
 		return this;
 	  }
@@ -19,9 +22,9 @@ export class BusTicket extends LitElement {
 	return html`
 	  	<div class="ticket">
 			<p>
-				<small>30 dana</small>
-				<data value="A90">A90<br>ZONA A</data>
-				<small>3.300rsd</small>
+				<small class="flaps">${this.period}</small>
+				<data value="A90">${this.ticket?.text}<small class="zone">${this.ticket?.zone}</small></data>
+				<small class="flaps">${this.ticket?.price}</small>
 			</p>
 		</div>
 	`;

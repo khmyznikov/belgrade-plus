@@ -2,6 +2,21 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
 <file target-language="sr" source-language="en" original="lit-localize-inputs" datatype="plaintext">
 <body>
+<trans-unit id="s7de66005a1e45f50">
+  <source>temporary ticket</source>
+</trans-unit>
+<trans-unit id="scd69fbcb1b6e71f8">
+  <source>90 min</source>
+</trans-unit>
+<trans-unit id="s314498b3f9a324ec">
+  <source>zone A</source>
+</trans-unit>
+<trans-unit id="s31449bb3f9a32a05">
+  <source>zone B</source>
+</trans-unit>
+<trans-unit id="s31449ab3f9a32852">
+  <source>zone C</source>
+</trans-unit>
 </body>
 </file>
 </xliff>

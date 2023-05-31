@@ -1,73 +1,75 @@
-
-svg {
-	position: fixed;
-}
-
-#ticket-texture {
-	opacity: 0.2;
+bus-ticket{
+	display: block;
+	filter: drop-shadow(rgba(0, 0, 0, 0.2) 5px 5px 8px) blur(0.2px);
 }
 
 .ticket {
-	filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.2)) blur(0.2px);
+	// filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.2)) blur(0.2px);
 	width: 90vw;
 	position: relative;
 
 	--border-color: #d43b39;
-	--red: #f54949;
-	--text-black: #322523;
+	--background: #f54949;
+	--text: rgba(255, 255, 255, 0.95) ;
+
+	background-color: var(--background);
+	color: var(--text);
 
 	font-family: Archivo;
-	// font-variation-settings: ;
-	color: var(--text-black);
+	clip-path: url(#ticket-shape);
 }
 
-.ticket::after {
-	content: "";
-	filter: url("#ticket-texture-red");
-	clip-path: url(#ticket-shape);
-	position: absolute;
-	inset: 0;
-}
+
 
 p {
 	z-index: 2;
 	padding: 15px 30px;
 	position: relative;
-	font-size: 3rem;
+	font-size: 45px;
 	font-stretch: 85%;
 	font-weight: 800;
-	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: -1px;
 	display: grid;
 	grid-template-columns: min-content 1fr min-content;
-	filter: url("#ticket-warp");
-	mix-blend-mode: multiply;
+	// filter: url("#ticket-warp");
+	// mix-blend-mode: multiply;
 	// transform: scale(0.95) translatex(-6px);
 	margin: 0;
+
+	.zone{
+		font-size: 30px;
+	}
 }
 
 data {
 	border: 3.5px solid var(--border-color);
-	padding: 0 0.75rem;
+	padding: 5px;
+
+	display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-p small {
+p .flaps {
 	font-size: 20px;
 	font-stretch: 85%;
 	font-weight: 400;
 	writing-mode: vertical-lr;
 	border: 3.5px solid var(--border-color);
-	letter-spacing: 1px;
+	padding: 4px;
+	letter-spacing: 0.5px;
+
+	text-transform: uppercase;
 }
-p small:last-child {
+p .flaps:last-child {
 	border-left: none;
-	border-bottom-right-radius: 0.75rem;
-	border-top-right-radius: 0.75rem;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
-p small:first-child {
+p .flaps:first-child {
 	border-right: none;
-	border-bottom-left-radius: 0.75rem;
-	border-top-left-radius: 0.75rem;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
 }

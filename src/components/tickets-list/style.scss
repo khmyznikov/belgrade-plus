@@ -1,37 +1,51 @@
-.tickets-list{
-	display: flex;
-    flex-direction: column;
-    gap: 15px;
-	
-	dt {
-		font-family: Archivo;
-		font-size: 40px;
-		font-stretch: 85%;
-    	font-weight: 800;
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
-		position: sticky;
-		top: 0px;
-		background-color: white;
-		z-index: 1;
-		text-align: center;
-	}
-	dd{
-		margin: 0;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		& + dd{
-			.ticket::after {
-				filter: url("#ticket-texture-blue");
-			}
-		}
-		& + dd + dd{
-			.ticket::after {
-				filter: url("#ticket-texture-white");
-			}
-		}
-	}
-	bus-ticket{
-		display: contents;
-	}
+  dt {
+    font-family: Archivo;
+    font-size: 24px;
+    font-stretch: 85%;
+    // font-weight: 800;
+
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    h3 {
+      margin: 0;
+      flex-grow: 1;
+      text-align: left;
+    }
+  }
+  dd {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & + dd {
+      .ticket {
+		--border-color: #142346;
+		--background: #1f366a;
+		// --text: #fff;
+      }
+    }
+    & + dd + dd {
+      .ticket {
+        --text: #3a3a3a;
+		--border-color: #9a9a9a;
+		--background: #fff;
+      }
+    }
+  }
+}
+
+#svg-filters{
+	width: 0;
+    height: 0;
 }
