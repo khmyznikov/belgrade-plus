@@ -2,9 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
 <file target-language="ru" source-language="en" original="lit-localize-inputs" datatype="plaintext">
 <body>
-<trans-unit id="s7de66005a1e45f50">
-  <source>temporary ticket</source>
-</trans-unit>
 <trans-unit id="scd69fbcb1b6e71f8">
   <source>90 min</source>
 </trans-unit>
@@ -16,6 +13,15 @@
 </trans-unit>
 <trans-unit id="s31449ab3f9a32852">
   <source>zone C</source>
+</trans-unit>
+<trans-unit id="s695097ec01bd5830">
+  <source>Temporary ticket</source>
+</trans-unit>
+<trans-unit id="s9c106e4df9350f62">
+  <source>Belgrade +plus</source>
+</trans-unit>
+<trans-unit id="sc30fb31cd2e39865">
+  <source>Click on the ticket to pay via SMS.</source>
 </trans-unit>
 </body>
 </file>

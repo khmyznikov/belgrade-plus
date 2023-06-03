@@ -1,0 +1,66 @@
+main{
+	font-family: 'FuturaPTLight';
+	height: 100%;
+
+	scroll-snap-type: y mandatory;
+    scroll-padding: 70px;
+    overflow-y: auto;
+
+	& header{
+		display: grid;
+		grid-template-columns: min-content 1fr;
+    	grid-template-rows: min-content;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+
+		margin: 10px 10px;
+
+		scroll-snap-align: start;
+
+		#app-logo{
+			width: 60px;
+			margin-right: 10px;
+			grid-area: 1 / 1 / 3 / 2;
+		}
+		#app-title{
+			display: flex;
+			align-items: flex-start;
+			
+			grid-area: 1 / 2 / 2 / 3;
+			margin: 0;
+
+			height: 45px;
+
+			& span {
+				font-family: 'FuturaPTLight';
+				font-size: 40px;
+				text-transform: uppercase;
+			}
+
+			& small{
+				font-family: 'FuturaPTDemi';
+				font-size: 30px;
+				line-height: 28px;
+				text-transform: lowercase;
+
+				color: #f54949;
+			}
+		}
+		#app-subtitle{
+			grid-area: 2 / 2 / 3 / 3;
+			margin: 0;
+
+			font-size: 20px;
+		}
+	}
+
+	#navigation-bar{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		background-color: #fff;
+		width: 100%;
+	}
+}

@@ -1,18 +1,18 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, unsafeCSS } from "lit";
 import { localized } from "@lit/localize";
 import { property, customElement } from "lit/decorators.js";
 
 import { BusTicket } from "../bus-ticket/bus-ticket";
 import { ticketsData } from "./data";
 
-import style from "./style.scss";
-import styleTicket from "../bus-ticket/style.scss";
+import style from "./style.css";
+import styleTicket from "../bus-ticket/style.css";
 
 @localized()
 @customElement("tickets-list")
 export class TicketsList extends LitElement {
   static get styles() {
-    return [style, styleTicket];
+    return [unsafeCSS(style), unsafeCSS(styleTicket)];
   }
 
   connectedCallback() {

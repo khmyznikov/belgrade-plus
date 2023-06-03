@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, unsafeCSS } from 'lit';
 import { localized } from '@lit/localize';
 import { property, customElement } from 'lit/decorators.js';
 
@@ -6,10 +6,10 @@ import { changeLocale } from '../localization';
 import { TicketsList } from '../components/tickets-list/tickets-list';
 
 declare const window: Window;
-
-import styles from './styles.scss';
+import styles from './style.css';
 import template from './template';
 
+import "../index.css";
 
 @localized()
 @customElement('core-root')
@@ -20,9 +20,10 @@ export class CoreRoot extends LitElement {
 	// @property() description = '';
 
 	static get styles() {
-		return [ styles ];
+		return [  unsafeCSS(styles) ];
 	}
 
+	
 
 	connectedCallback() {
 		changeLocale(navigator.language);

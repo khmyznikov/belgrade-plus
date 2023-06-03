@@ -6,7 +6,7 @@ const zoneC = msg('zone C');
 
 export const ticketsData = [
 	{
-		type: msg('temporary ticket'),
+		type: msg('Temporary ticket'),
 		period: msg('90 min'),
 		tickets: [
 			{
@@ -27,7 +27,7 @@ export const ticketsData = [
 		]
 	},
 	{
-		type: 'daily ticket',
+		type: 'Daily ticket',
 		period: '1 day',
 		tickets: [
 			{
@@ -48,7 +48,7 @@ export const ticketsData = [
 		]
 	},
 	{
-		type: 'weekly ticket',
+		type: 'Weekly ticket',
 		period: '7 days',
 		tickets: [
 			{
@@ -69,7 +69,7 @@ export const ticketsData = [
 		]
 	},
 	{
-		type: 'monthly ticket',
+		type: 'Monthly ticket',
 		period: '30 days',
 		tickets: [
 			{

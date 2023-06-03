@@ -23,7 +23,7 @@ export class BusTicket extends LitElement {
 	  	<div class="ticket">
 			<p>
 				<small class="flaps">${this.period}</small>
-				<data value="A90">${this.ticket?.text}<small class="zone">${this.ticket?.zone}</small></data>
+				<a href="sms:9011;?&body=${this.ticket?.text}">${this.ticket?.text}<small class="zone">${this.ticket?.zone}</small></a>
 				<small class="flaps">${this.ticket?.price}</small>
 			</p>
 		</div>

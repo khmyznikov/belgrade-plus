@@ -1,10 +1,10 @@
 bus-ticket{
 	display: block;
-	filter: drop-shadow(rgba(0, 0, 0, 0.2) 5px 5px 8px) blur(0.2px);
+	filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 8px) blur(0.2px);
 }
 
 .ticket {
-	// filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.2)) blur(0.2px);
+	/* filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.2)) blur(0.2px); */
 	width: 90vw;
 	position: relative;
 
@@ -32,17 +32,23 @@ p {
 	letter-spacing: -1px;
 	display: grid;
 	grid-template-columns: min-content 1fr min-content;
-	// filter: url("#ticket-warp");
+	/* // filter: url("#ticket-warp");
 	// mix-blend-mode: multiply;
-	// transform: scale(0.95) translatex(-6px);
+	// transform: scale(0.95) translatex(-6px); */
 	margin: 0;
 
 	.zone{
+		font-family: "FuturaPTHeavy";
 		font-size: 30px;
 	}
 }
 
-data {
+a {
+	font-family: "FuturaPTBold";
+
+	color: inherit;
+    text-decoration: inherit;
+
 	border: 3.5px solid var(--border-color);
 	padding: 5px;
 
@@ -52,6 +58,8 @@ data {
 }
 
 p .flaps {
+	font-family: "FuturaPTDemi";
+
 	font-size: 20px;
 	font-stretch: 85%;
 	font-weight: 400;
