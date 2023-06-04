@@ -69,7 +69,8 @@ export default {
           // 	// }
           // }
         ],
-        exclude: [/node_modules/, /index\.css/],
+        // include: [/node_modules\/leaflet\/dist/, /src/],
+        exclude: [/index\.css/],
       },
       {
         test: /index\.css$/i,

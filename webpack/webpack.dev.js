@@ -16,8 +16,11 @@ export default merge(common, {
 		// static: {
 		// 	directory: resolve(__dirname, '../public')
 		// },
+		historyApiFallback: {
+			index: '/'
+		},
 		compress: false,
-		host: '0.0.0.0',
+		host: 'localhost',
 		port: 3000
 	},
 	devtool: 'source-map',

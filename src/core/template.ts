@@ -1,8 +1,7 @@
 import { html } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
 import { msg } from '@lit/localize';
 
-const template = () => {
+const template = (routeName: string) => {
     // const installDialogClasses = () => { return {available: installAvailable, gallery: galleryRequested }};
     // <div class="install-dialog chrome ${classMap(installDialogClasses())}">
 
@@ -14,11 +13,13 @@ const template = () => {
                 <h1 id="app-title"><span>${msg('Belgrade')}</span><small>${msg('+plus')}</small></h1>
                 <p id="app-subtitle">${msg('Click on the ticket to pay via SMS.')}</p>
             </header>
-            <tickets-list></tickets-list>
+            ${routeName === 'home' ? html`<tickets-list></tickets-list>` : ''}
+            ${routeName === 'map' ? html`<map-embed></map-embed>` : ''}
+            ${routeName === 'info' ? html`INFO` : ''}
             <nav id="navigation-bar">
-                <button>map</button>
-                <button>ticket</button>
-                <button>info</button>
+                <a href="/map">map</a>
+                <a href="/">ticket</a>
+                <a href="/info">info</a>
             </nav>
         </main>
 

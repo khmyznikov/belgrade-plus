@@ -1,0 +1,8 @@
+#map{
+	display: flex;
+    flex-grow: 1;
+
+	> div.leaflet-control-container > div.leaflet-bottom.leaflet-right{
+		display: none;
+	}
+}

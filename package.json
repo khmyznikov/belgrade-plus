@@ -22,6 +22,7 @@
   "devDependencies": {
     "@lit/localize-tools": "^0.7.0-pre.0",
     "@types/dom-chromium-installation-events": "^101.0.0",
+    "@types/leaflet": "^1.9.3",
     "@types/node": "^18.16.8",
     "@types/web-app-manifest": "^1.0.3",
     "autoprefixer": "^10.4.14",
@@ -29,8 +30,6 @@
     "css-loader": "^6.8.1",
     "eslint": "^8.40.0",
     "express": "^4.18.2",
-    "extract-loader": "^5.1.0",
-    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "lit-scss-loader": "^2.0.1",
     "mini-css-extract-plugin": "^2.7.6",
@@ -39,10 +38,8 @@
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.0",
     "postcss-nesting": "^11.2.2",
-    "resolve-url-loader": "^5.0.0",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
-    "style-loader": "^3.3.3",
     "terser-webpack-plugin": "^5.3.8",
     "ts-loader": "9.4.2",
     "typescript": "^5.0.4",
@@ -54,7 +51,11 @@
   },
   "dependencies": {
     "@lit/localize": "^0.11.5-pre.0",
-    "lit": "^3.0.0-pre.0"
+    "@nanostores/lit": "^0.1.4",
+    "@nanostores/router": "^0.10.0",
+    "leaflet": "^1.9.4",
+    "lit": "^3.0.0-pre.0",
+    "nanostores": "^0.9.1"
   },
   "bugs": {
     "url": "https://github.com/khmyznikov/beograd-bus-sms/issues"

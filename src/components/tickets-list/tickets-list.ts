@@ -2,11 +2,11 @@ import { LitElement, html, unsafeCSS } from "lit";
 import { localized } from "@lit/localize";
 import { property, customElement } from "lit/decorators.js";
 
-import { BusTicket } from "../bus-ticket/bus-ticket";
+import { BusTicket } from "./bus-ticket/bus-ticket";
 import { ticketsData } from "./data";
 
 import style from "./style.css";
-import styleTicket from "../bus-ticket/style.css";
+import styleTicket from "./bus-ticket/style.css";
 
 @localized()
 @customElement("tickets-list")

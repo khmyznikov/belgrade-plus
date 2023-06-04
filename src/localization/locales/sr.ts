@@ -14,7 +14,8 @@
 's31449ab3f9a32852': `zone C`,
 's695097ec01bd5830': `Temporary ticket`,
 'scd69fbcb1b6e71f8': `90 min`,
-'s9c106e4df9350f62': `Belgrade +plus`,
+'sb4425e1a7661c95b': `Belgrade`,
+'s9a69a1841d0753ae': `+plus`,
 'sc30fb31cd2e39865': `Click on the ticket to pay via SMS.`,
     };
   

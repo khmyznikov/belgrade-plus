@@ -6,6 +6,10 @@ main{
     scroll-padding: 70px;
     overflow-y: auto;
 
+	display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
 	& header{
 		display: grid;
 		grid-template-columns: min-content 1fr;
@@ -62,5 +66,12 @@ main{
 		z-index: 1;
 		background-color: #fff;
 		width: 100%;
+	}
+}
+
+map-embed{
+	display: contents;
+	+ #navigation-bar{
+		position: relative;
 	}
 }

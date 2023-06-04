@@ -17,11 +17,14 @@
 <trans-unit id="s695097ec01bd5830">
   <source>Temporary ticket</source>
 </trans-unit>
-<trans-unit id="s9c106e4df9350f62">
-  <source>Belgrade +plus</source>
-</trans-unit>
 <trans-unit id="sc30fb31cd2e39865">
   <source>Click on the ticket to pay via SMS.</source>
+</trans-unit>
+<trans-unit id="sb4425e1a7661c95b">
+  <source>Belgrade</source>
+</trans-unit>
+<trans-unit id="s9a69a1841d0753ae">
+  <source>+plus</source>
 </trans-unit>
 </body>
 </file>
