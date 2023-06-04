@@ -88,7 +88,7 @@ export default {
         ],
       },
       {
-        test: /\.woff2/,
+        test: /\.(woff2|png|svg)/,
         type: "asset/resource",
       },
     ],

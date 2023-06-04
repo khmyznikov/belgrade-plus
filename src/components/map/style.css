@@ -5,4 +5,15 @@
 	> div.leaflet-control-container > div.leaflet-bottom.leaflet-right{
 		display: none;
 	}
+
+	.leaflet-marker-icon{
+		/* filter: drop-shadow(black 0px -2px 2px); */
+		border-radius: 50%;
+		padding: 5px;
+		outline: rgb(255, 255, 255) dashed 4px;
+		background-color: rgb(0 0 0 / 60%);
+	}
+	.leaflet-tile-container{
+		filter: grayscale(25%);
+	}
 }

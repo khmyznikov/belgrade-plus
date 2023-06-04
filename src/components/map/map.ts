@@ -5,9 +5,13 @@ import { customElement } from "lit/decorators.js";
 import leafletstyle from "leaflet/dist/leaflet.css";
 import leaflet, { LatLngExpression } from "leaflet";
 
-import { zone1, zone2 } from "./data";
+import { zoneA, zoneB } from "./data";
+
+import logo from '../../assets/icons/pin_point.svg';
 
 import styles from "./style.css";
+
+const MAX_ZOOM = 17;
 
 @localized()
 @customElement("map-embed")
@@ -27,21 +31,48 @@ export class MapEmbed extends LitElement {
   //   }
 
   firstUpdated() {
-
     this.map = leaflet
       .map((this.renderRoot?.querySelector("#map") as HTMLElement) || "map")
       .setView([44.8133, 20.4559], 11);
     leaflet
       .tileLayer("https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png", {
-        maxZoom: 17,
+        maxZoom: MAX_ZOOM,
       })
       .addTo(this.map);
 
-	const zone1Layer = leaflet.polyline(zone1 as LatLngExpression[], {color: 'red', fill: true, weight: 6, smoothFactor: 4}).addTo(this.map);
-	const zone2Layer = leaflet.polyline(zone2 as LatLngExpression[], {color: 'blue', fill: true, weight: 6, smoothFactor: 4}).addTo(this.map);
-	this.map.fitBounds(zone1Layer.getBounds().extend(zone2Layer.getBounds()), { animate: false });
-	this.map.setMaxBounds(this.map.getBounds());
-	this.map.setMinZoom(this.map.getZoom());
+    const zoneALayer = leaflet
+      .polyline(zoneA as LatLngExpression[], {
+        color: "red",
+        fill: true,
+        weight: 6,
+        smoothFactor: 4,
+      })
+      .addTo(this.map);
+    const zoneBLayer = leaflet
+      .polyline(zoneB as LatLngExpression[], {
+        color: "blue",
+        fill: true,
+        weight: 6,
+        smoothFactor: 4,
+      })
+      .addTo(this.map);
+    this.map.fitBounds(zoneALayer.getBounds().extend(zoneBLayer.getBounds()), {
+      animate: false,
+    });
+    this.map.setMaxBounds(this.map.getBounds());
+    this.map.setMinZoom(this.map.getZoom());
+
+    let marker = leaflet.marker([0, 0], { icon: leaflet.icon({ iconUrl: logo, iconSize: [32, 32] }) });
+    marker.on("click", () => {
+      marker.remove();
+    });
+
+    this.map.locate({ setView: true, enableHighAccuracy: true, maxZoom: MAX_ZOOM/1.5});
+    this.map.on("locationfound", (e) => {
+      console.log(e);
+      marker.setLatLng(e.latlng).addTo(this.map!);
+    });
+
   }
 
   render() {

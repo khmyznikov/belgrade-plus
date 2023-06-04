@@ -1,4 +1,4 @@
-export const zone1 = [
+export const zoneA = [
   [45.07, 20.417],
   [45.072, 20.418],
   [45.076, 20.422],
@@ -285,7 +285,7 @@ export const zone1 = [
   [45.07, 20.417],
   [45.07, 20.417],
 ];
-export const zone2 = [
+export const zoneB = [
   [44.68, 20.732],
   [44.679, 20.734],
   [44.676, 20.74],
