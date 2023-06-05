@@ -67,15 +67,24 @@ export class MapEmbed extends LitElement {
       marker.remove();
     });
 
-    this.map.locate({ setView: true, enableHighAccuracy: true, maxZoom: MAX_ZOOM/1.5});
     this.map.on("locationfound", (e) => {
-      console.log(e);
+      this.map?.setView(e.latlng, MAX_ZOOM/1.5 , { animate: true });
       marker.setLatLng(e.latlng).addTo(this.map!);
+      console.log(e);
+    });
+    this.map.on("locationerror", (e) => {
+      console.log(e);
     });
 
   }
 
+  // method findMe () {
+  //   this.map.locate({ setView: false, enableHighAccuracy: true, maxZoom: MAX_ZOOM/1.5});
+  // }
+
   render() {
-    return html` <article id="map"></article> `;
+    return html` <article id="map">
+      <button type="button" id="locate">Locate me</button>
+    </article> `;
   }
 }

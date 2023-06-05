@@ -33,7 +33,7 @@
     "html-webpack-plugin": "^5.5.1",
     "lit-scss-loader": "^2.0.1",
     "mini-css-extract-plugin": "^2.7.6",
-    "minify-lit-html-loader": "0.0.3",
+    "minify-lit-html-loader": "github:khmyznikov/minify-lit-html-loader",
     "postcss": "^8.4.23",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.0",
