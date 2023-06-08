@@ -1,6 +1,33 @@
 #map{
 	display: flex;
     flex-grow: 1;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+
+	--point-color: #fff;
+
+	#locate{
+		z-index: 500;
+
+		width: 60px;
+		height: 60px;
+		margin: 15px;
+		padding: 0;
+
+		border: none;
+		border-radius: 50%;
+
+		background-color: #fff;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+		
+		&::before{
+			content: '';
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: url(../../assets/icons/pin_point.svg) no-repeat center;
+		}
+	}
 
 	> div.leaflet-control-container > div.leaflet-bottom.leaflet-right{
 		display: none;
