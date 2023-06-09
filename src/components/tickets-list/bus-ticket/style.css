@@ -1,6 +1,6 @@
 bus-ticket{
 	display: block;
-	filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 8px) blur(0.2px);
+	filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 8px);
 }
 
 .ticket {
@@ -9,18 +9,15 @@ bus-ticket{
 	max-width: 400px;
 	position: relative;
 
-	--border-color: #d43b39;
-	--background: #f54949;
+	--border-color: var(--zone-a-border);
+	--background-color: var(--zone-a-color);
 	--text: rgba(255, 255, 255, 0.95) ;
 
-	background-color: var(--background);
+	background-color: var(--background-color);
 	color: var(--text);
 
-	font-family: Archivo;
 	clip-path: url(#ticket-shape);
 }
-
-
 
 p {
 	z-index: 2;

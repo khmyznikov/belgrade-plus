@@ -1,3 +1,5 @@
+@import url(./_variables.css);
+
 @font-face {
 	font-family: 'FuturaPTLight';
 	src: url('./assets/fonts/FuturaPTLight.woff2') format('woff2');
@@ -19,20 +21,17 @@
 	src: url('./assets/fonts/FuturaPTExtraBold.woff2') format('woff2');
 }
 
-
 html{
     background-color: #fff;
     width: 100%;
     height: 100%;
 
-    /* scroll-snap-type: y mandatory;
-    
-    scroll-padding-top: 0;
-    scroll-padding: 70px; */
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 body{
-    /* background: linear-gradient(90deg, rgba(144,92,180,1) 0%, rgba(255,90,152,1) 50%, rgba(255,201,124,1) 100%); */
-
     height: 100%;
     margin: 0;
 }

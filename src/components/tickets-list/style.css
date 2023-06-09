@@ -5,6 +5,8 @@
 
   padding-bottom: 30px;
 
+  user-select: none;
+
   & dt {
     font-family: "FuturaPTBold";
     font-size: 24px;
@@ -40,16 +42,15 @@
 
     + dd .ticket{
      
-        --border-color: #142346;
-        --background: #1f366a;
-        /* // --text: #fff; */
-      
+        --border-color: var(--zone-b-border);
+        --background-color: var(--zone-b-color);
+
     }
     + dd + dd {
       .ticket {
         --text: #3a3a3a;
-        --border-color: #9a9a9a;
-        --background: #fff;
+        --border-color: var(--zone-c-border);
+        --background-color: var(--zone-c-color);
       }
     }
   }

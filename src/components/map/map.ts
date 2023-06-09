@@ -1,6 +1,6 @@
 import { LitElement, html, unsafeCSS } from "lit";
 import { localized } from "@lit/localize";
-import { customElement } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 
 import leafletstyle from "leaflet/dist/leaflet.css";
 import leaflet, { LatLngExpression } from "leaflet";
@@ -42,7 +42,7 @@ export class MapEmbed extends LitElement {
 
     const zoneALayer = leaflet
       .polyline(zoneA as LatLngExpression[], {
-        color: "red",
+        color: "var(--zone-a-color)",
         fill: true,
         weight: 6,
         smoothFactor: 4,
@@ -50,7 +50,7 @@ export class MapEmbed extends LitElement {
       .addTo(this.map);
     const zoneBLayer = leaflet
       .polyline(zoneB as LatLngExpression[], {
-        color: "blue",
+        color: "var(--zone-b-color)",
         fill: true,
         weight: 6,
         smoothFactor: 4,
@@ -68,24 +68,32 @@ export class MapEmbed extends LitElement {
     });
 
     this.map.on("locationfound", (e) => {
+      this.locationStatus = '';
       marker.setLatLng(e.latlng).addTo(this.map!);
       this.map?.setView(e.latlng, MAX_ZOOM - 1 , { animate: true });
       console.log(e);
     });
     this.map.on("locationerror", (e) => {
+      this.locationStatus = 'error';
       console.log(e);
     });
 
   }
 
+  @property()
+  private locationStatus = '' as 'loading' | 'error' | '';
+
   findMe() {
-    this.map!.locate({ setView: false, enableHighAccuracy: true, maxZoom: MAX_ZOOM/1.5});
+    this.locationStatus = 'loading';
+    this.map!.locate({ setView: false, enableHighAccuracy: true, });
   }
 
   render() {
     return html` <article id="map">
-      <button type="button" id="locate" @click=${this.findMe}>
-      
+      <button type="button" id="locate" @click=${this.findMe} .disabled=${this.locationStatus == 'loading'} class=${this.locationStatus} > 
+        <svg viewBox="0 0 16 16" id="pin_point">
+          <use href="${logo}#pin_point"></use>
+        </svg>
       </button>
     </article> `;
   }
