@@ -28,6 +28,11 @@
 			padding: 12px;
 		}
 
+		&::after{
+			content: "";
+			opacity: 0;
+		}
+
 		&.loading::after {
 			content: "";
 			position: absolute;
@@ -39,7 +44,9 @@
 			border: 4px solid transparent;
 			border-top-color: var(--loading-color);
 			border-radius: 50%;
-			animation: locate-loading-spinner 0.8s ease infinite;
+			opacity: 1;
+			transition: opacity 0.5s linear;
+			animation: locate-loading-spinner 0.8s ease infinite ;
 		  }
 
 		  &.error{

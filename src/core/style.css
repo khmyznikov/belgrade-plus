@@ -76,7 +76,7 @@ main{
 	#navigation-bar{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		z-index: 1;
 		background-color: #fff;
@@ -93,6 +93,22 @@ main{
 			& svg{
 				width: 35px;
 				flex-grow: 1;
+			}
+		}
+
+		&.home-active #ticket-button{
+			& svg{
+				fill: var(--zone-a-color);
+			}
+		}
+		&.map-active #map-button{
+			& svg{
+				fill: var(--zone-a-color);
+			}
+		}
+		&.info-active #info-button{
+			& svg{
+				fill: var(--zone-a-color);
 			}
 		}
 	}
