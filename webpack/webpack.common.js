@@ -5,6 +5,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 import autoprefixer from "autoprefixer";
 import postcssNesting from "postcss-nesting";
+import cssnano from "cssnano";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -55,7 +56,7 @@ export default {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: ["postcss-import", autoprefixer(), postcssNesting],
+                plugins: ["postcss-import", autoprefixer(), postcssNesting, cssnano()],
               },
             },
           },
@@ -76,12 +77,12 @@ export default {
         test: /index\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-		  "css-loader",
+		      "css-loader",
           {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: ["postcss-import", autoprefixer(), postcssNesting],
+                plugins: ["postcss-import", autoprefixer(), postcssNesting, cssnano()],
               },
             },
           }

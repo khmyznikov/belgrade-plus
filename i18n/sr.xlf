@@ -26,6 +26,15 @@
 <trans-unit id="s9a69a1841d0753ae">
   <source>+plus</source>
 </trans-unit>
+<trans-unit id="s70322bc2ebdf730c">
+  <source>Zone A</source>
+</trans-unit>
+<trans-unit id="s70322ec2ebdf7825">
+  <source>Zone B</source>
+</trans-unit>
+<trans-unit id="s154129acce74239c">
+  <source> Zone C</source>
+</trans-unit>
 </body>
 </file>
 </xliff>

@@ -67,6 +67,10 @@
 	}
 	.leaflet-tile-container{
 		filter: grayscale(50%);
+
+		.leaflet-tile{
+			mix-blend-mode: darken;
+		}
 	}
 
 	.leaflet-control-zoom{

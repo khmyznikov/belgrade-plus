@@ -17,5 +17,8 @@
 'sb4425e1a7661c95b': `Belgrade`,
 's9a69a1841d0753ae': `+plus`,
 'sc30fb31cd2e39865': `Click on the ticket to pay via SMS.`,
+'s70322bc2ebdf730c': `Zone A`,
+'s70322ec2ebdf7825': `Zone B`,
+'s154129acce74239c': ` Zone C`,
     };
   

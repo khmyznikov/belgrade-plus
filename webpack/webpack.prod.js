@@ -35,5 +35,5 @@ export default merge(common, {
             })
         ],
     },
-	devtool: 'source-map'
+	// devtool: 'source-map'
 });
