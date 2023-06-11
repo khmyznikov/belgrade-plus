@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "beograd-bus-sms": {
+      "appLocation": "./dist",
+      "outputLocation": ".",
+      "appBuildCommand": "",
+      "run": "npm run dev",
+      "appDevserverUrl": "http://localhost:3000"
+    }
+  }
+}

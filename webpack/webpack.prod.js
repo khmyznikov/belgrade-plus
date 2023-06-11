@@ -4,6 +4,7 @@ import { merge }  from 'webpack-merge';
 
 import TerserPlugin from 'terser-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 export default merge(common, {
     output: {
@@ -13,6 +14,14 @@ export default merge(common, {
         new CleanWebpackPlugin(),   
         new webpack.optimize.LimitChunkCountPlugin({
             maxChunks: 1
+        }),
+        new CopyPlugin({
+            patterns: [
+              {
+                from: "./staticwebapp.config.json",
+                to: "./",
+              }
+            ]
         })
     ],
 	optimization: {

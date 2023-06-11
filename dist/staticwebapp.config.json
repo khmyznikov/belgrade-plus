@@ -1,0 +1,16 @@
+{
+	"routes": [
+		{
+			"route": "/map*",
+			"rewrite": "/index.html"
+		},
+		{
+			"route": "/info*",
+			"rewrite": "/index.html"
+		}
+	],
+	"navigationFallback": {
+	  "rewrite": "/index.html",
+	  "exclude": ["*.{png,css,svg,js,json,woff2}"]
+	}
+  }
