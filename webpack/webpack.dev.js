@@ -5,7 +5,7 @@ import path, { resolve }  from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __dirname = path.dirname(__filename);
 
 export default merge(common, {
 	// plugins: [],
@@ -19,8 +19,9 @@ export default merge(common, {
 		historyApiFallback: {
 			index: '/'
 		},
+		allowedHosts: "all",
 		compress: false,
-		host: 'localhost',
+		host: '0.0.0.0',
 		port: 3000
 	},
 	devtool: 'source-map',

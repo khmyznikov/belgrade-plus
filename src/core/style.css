@@ -106,7 +106,7 @@ main{
 				fill: var(--zone-a-color);
 			}
 		}
-		&.info-active #info-button{
+		&.settings-active #settings-button{
 			& svg{
 				fill: var(--zone-a-color);
 			}

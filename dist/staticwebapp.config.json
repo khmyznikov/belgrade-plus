@@ -5,7 +5,7 @@
 			"rewrite": "/index.html"
 		},
 		{
-			"route": "/info*",
+			"route": "/settings*",
 			"rewrite": "/index.html"
 		}
 	],

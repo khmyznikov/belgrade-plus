@@ -17,7 +17,7 @@ import "../index.css";
 const router = createRouter({
 	home: '/',
 	map: '/map',
-	info: '/info'
+	settings: '/settings'
 });
 
 @localized()
