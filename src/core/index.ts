@@ -6,8 +6,8 @@ import { createRouter } from "@nanostores/router";
 import { useStores } from '@nanostores/lit';
 
 import { changeLocale } from '../localization';
-import { TicketsList } from '../components/tickets-list/tickets-list';
-import { MapEmbed } from '../components/map/map';
+import '../components/tickets-list/tickets-list';
+import '../components/map/map';
 
 import styles from './style.css';
 import template from './template';
@@ -31,8 +31,6 @@ export class CoreRoot extends LitElement {
 
 	connectedCallback() {
 		changeLocale(navigator.language);
-		TicketsList.finalized;
-		MapEmbed.finalized;
 		super.connectedCallback();
 		console.log(router.get()?.route);
 	}
