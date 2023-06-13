@@ -121,3 +121,7 @@ map-embed{
 		z-index: 500;
 	}
 }
+
+tickets-list{
+	padding-bottom: 60px;
+}

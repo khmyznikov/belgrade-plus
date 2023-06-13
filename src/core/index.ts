@@ -31,9 +31,13 @@ export class CoreRoot extends LitElement {
 	}
 
 	connectedCallback() {
-		changeLocale(navigator.language);
+		try { 
+			changeLocale(localStorage.getItem('locale') || navigator.language);
+		} catch {
+			console.warn(`bus-plus: localStorage is not available`);
+		}
+
 		super.connectedCallback();
-		console.log(router.get()?.route);
 	}
 
 	render() {
