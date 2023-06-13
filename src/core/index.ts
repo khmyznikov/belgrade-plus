@@ -7,6 +7,7 @@ import { useStores } from '@nanostores/lit';
 
 import { changeLocale } from '../localization';
 import '../components/tickets-list/tickets-list';
+import '../components/settings/settings';
 import '../components/map/map';
 
 import styles from './style.css';
@@ -20,9 +21,9 @@ const router = createRouter({
 	settings: '/settings'
 });
 
-@localized()
 @customElement('core-root')
 @useStores(router)
+@localized()
 export class CoreRoot extends LitElement {
 
 	static get styles() {

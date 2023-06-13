@@ -4,8 +4,8 @@ import { property, customElement } from 'lit/decorators.js';
 
 // import styles from './style.scss';
 
-@localized()
 @customElement('bus-ticket')
+@localized()
 export class BusTicket extends LitElement {
 	// static get styles() {
 	// 	return [ styles ];

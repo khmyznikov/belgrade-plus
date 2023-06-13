@@ -8,8 +8,8 @@ import { ticketsData } from "./data";
 import style from "./style.css";
 import styleTicket from "./bus-ticket/style.css";
 
-@localized()
 @customElement("tickets-list")
+@localized()
 export class TicketsList extends LitElement {
   static get styles() {
     return [unsafeCSS(style), unsafeCSS(styleTicket)];

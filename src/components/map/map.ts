@@ -13,8 +13,8 @@ import styles from "./style.css";
 
 const MAX_ZOOM = 17;
 
-@localized()
 @customElement("map-embed")
+@localized()
 export class MapEmbed extends LitElement {
   static get styles() {
     return [unsafeCSS(leafletstyle), unsafeCSS(styles)];
