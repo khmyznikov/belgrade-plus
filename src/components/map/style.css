@@ -4,9 +4,9 @@
 	flex-direction: column-reverse;
 	align-items: flex-end;
 
-	--icon-color: rgb(0, 0, 0);
+	--icon-color: var(--text-color);
 	--error-color: rgb(255, 0, 0);
-	--loading-color: rgb(0, 0, 0);
+	--loading-color: var(--text-color);
 
 	#locate{
 		z-index: 500;
@@ -21,7 +21,7 @@
 		border: none;
 		border-radius: 50%;
 
-		background-color: #fff;
+		background-color: var(--nav-background-color);
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
 
 		& svg {
@@ -104,4 +104,18 @@
 	to {
 	  transform: rotate(1turn);
 	}
-  }
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+	#map {
+		.leaflet-tile-container{
+			filter: grayscale(40%) contrast(0.7);
+		}
+
+		.leaflet-pane .leaflet-tile-container .leaflet-tile{
+			filter: invert(1);
+			opacity: 1 !important;
+		}
+	}
+}

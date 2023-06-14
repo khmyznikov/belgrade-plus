@@ -5,7 +5,7 @@ import { customElement } from 'lit/decorators.js';
 import { createRouter } from "@nanostores/router";
 import { useStores } from '@nanostores/lit';
 
-import { changeLocale } from '../localization';
+import { changeLocale, currentLocale } from '../localization';
 import '../components/tickets-list/tickets-list';
 import '../components/settings/settings';
 import '../components/map/map';
@@ -14,6 +14,7 @@ import styles from './style.css';
 import template from './template';
 
 import "../index.css";
+import { setThemeMode } from '../components/settings/theme.helper';
 
 const router = createRouter({
 	home: '/',
@@ -30,13 +31,14 @@ export class CoreRoot extends LitElement {
 		return [  unsafeCSS(styles) ];
 	}
 
-	connectedCallback() {
+	async connectedCallback() {
 		try { 
-			changeLocale(localStorage.getItem('locale') || navigator.language);
+			await changeLocale(localStorage.getItem('locale') || navigator.language);
+			document.documentElement.setAttribute('lang', currentLocale());
 		} catch {
 			console.warn(`bus-plus: localStorage is not available`);
 		}
-
+		setThemeMode();
 		super.connectedCallback();
 	}
 

@@ -5,6 +5,7 @@ import { property, customElement } from "lit/decorators.js";
 import { changeLocale, currentLocale, locales } from "../../localization";
 
 import style from "./style.css";
+import { getThemeMode, setThemeMode } from "./theme.helper";
 
 @customElement("settings-info")
 @localized()
@@ -34,7 +35,7 @@ export class SettingsInfo extends LitElement {
 
   connectedCallback(): void {
     try {
-      this.preferredTheme = localStorage.getItem("preferred-theme");
+      this.preferredTheme = getThemeMode();
     } catch (e) {}
 
     super.connectedCallback();
@@ -44,10 +45,10 @@ export class SettingsInfo extends LitElement {
     .matches
     ? "dark"
     : "light";
+
   private changeTheme(event: Event) {
     const _theme = (event?.target as HTMLSelectElement)?.value;
-    localStorage.setItem("preferred-theme", _theme);
-    document.documentElement.setAttribute("data-theme-mode", _theme);
+    setThemeMode(_theme);
   }
 
   // private changeTheme () {
@@ -84,8 +85,8 @@ export class SettingsInfo extends LitElement {
           <label for="theme">${msg("Theme")}</label>
           <select title="theme" id="theme" @change=${this.changeTheme}>
             <option
-              value="auto"
-              ?selected=${this.preferredTheme == "auto" || null}
+              value="system"
+              ?selected=${this.preferredTheme == "system" || null}
             >
               🤖${msg("Auto")}
             </option>

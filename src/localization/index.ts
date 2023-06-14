@@ -24,9 +24,9 @@ export const currentLocale = () => {
   return getLocale();
 };
 
-export const changeLocale = (lang: string) => {
+export const changeLocale = async (lang: string) => {
   try {
-    setLocale(lang.slice(0, 2));
+    await setLocale(lang.slice(0, 2));
     try {
       localStorage.setItem('locale', lang.slice(0, 2));
     }
