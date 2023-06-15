@@ -1,6 +1,7 @@
 import { LitElement, html, unsafeCSS } from "lit";
 import { localized } from "@lit/localize";
 import { customElement, property } from "lit/decorators.js";
+import { getThemeMode } from "../settings/theme.helper";
 
 import leafletstyle from "leaflet/dist/leaflet.css";
 import leaflet, { LatLngExpression } from "leaflet";
@@ -85,11 +86,11 @@ export class MapEmbed extends LitElement {
 
   findMe() {
     this.locationStatus = 'loading';
-    this.map!.locate({ setView: false, enableHighAccuracy: true, });
+    this.map!.locate({ setView: false, enableHighAccuracy: true, timeout: 20000});
   }
 
   render() {
-    return html` <article id="map">
+    return html` <article id="map" data-theme=${getThemeMode()}>
       <button type="button" id="locate" title="locate" @click=${this.findMe} .disabled=${this.locationStatus == 'loading'} class=${this.locationStatus} > 
         <svg viewBox="0 0 16 16" id="pin_point">
           <use href="${logo}#pin_point"></use>

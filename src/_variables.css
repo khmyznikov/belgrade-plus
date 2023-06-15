@@ -1,6 +1,6 @@
 :root{ 
 	--text-color: #0c0c0c;
-	--background-color: #f4f4f4;
+	--background-color: #fbfbfb;
 	--nav-background-color: #fcfcfc;
 
 	--zone-a-color: #ea2f2a;
@@ -34,7 +34,7 @@
 
 html[data-theme='light'] {
 	--text-color: #0c0c0c;
-	--background-color: #f4f4f4;
+	--background-color: #fbfbfb;
 	--nav-background-color: #fcfcfc;
 }
 
