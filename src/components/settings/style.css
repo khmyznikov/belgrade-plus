@@ -5,19 +5,26 @@
   gap: 15px;
 
   padding: 0 15px;
+  padding-bottom: 20px;
 
   font-size: 20px;
+
+  user-select: none;
 
   & p {
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    scroll-snap-align: start;
   }
 
   & label {
     font-family: "FuturaPTDemi";
     font-size: 22px;
+
+    scroll-snap-align: start;
   }
 
   & select {
@@ -36,10 +43,34 @@
     }
   }
 }
-.form-title {
+#disclaimer{
+  padding-bottom: 50px;
+
+  & p{
+    font-size: 18px;
+    line-height: 20px;
+    
+    padding: 0px 15px 20px;
+    margin: 0;
+
+    scroll-snap-align: start;
+  }
+
+  #friendship{
+    display: block;
+    margin: 0 auto;
+
+    padding-bottom: 20px;
+
+    scroll-snap-align: start;
+  }
+}
+.form-title{
   font-family: "FuturaPTBold";
   font-size: 28px;
 
   margin: 5px 0px;
   padding: 10px 15px;
+
+  scroll-snap-align: start;
 }

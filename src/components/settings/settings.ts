@@ -5,6 +5,8 @@ import { property, customElement } from "lit/decorators.js";
 import { changeLocale, currentLocale, locales } from "../../localization";
 
 import style from "./style.css";
+import friendship from '../../assets/icons/friendship.png';
+
 import { getThemeMode, setThemeMode } from "./theme.helper";
 
 @customElement("settings-info")
@@ -105,6 +107,17 @@ export class SettingsInfo extends LitElement {
           </select>
         </p>
       </form>
+
+      <aside id="disclaimer">
+        <h3 class="form-title">${msg("About")}</h3>
+        <p>${msg(
+          html`&emsp;This application was created voluntarily as a gift to the city of Belgrade, as a gesture of gratitude for the friendship shared between Serbia and Russia.
+            <br/><br/>
+            &emsp;The application is unofficial and does not have any agreements with the government. The SMS address, text, and transport zones were taken from official bus stop posters.
+            <br/><br/>
+            &emsp;No fees are collected, and there are no ads or information tracking.`)}</p>
+        <img id="friendship" width="174" src="${friendship}" alt="Rusko-Srpsko prijateljstvo"/>
+      </aside>
     `;
   }
 }
