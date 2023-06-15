@@ -70,6 +70,16 @@ main{
 				font-family: FuturaPTHeavy;
 				font-weight: unset;
 			}
+
+			.zone-a, .zone-b, .zone-c{
+				text-transform: capitalize;
+			}
+		}
+
+		@media screen and (max-width: 385px) {
+			#app-subtitle{
+				font-size: 18px;
+			}
 		}
 	}
 
@@ -79,7 +89,7 @@ main{
 		position: fixed;
 		bottom: 0;
 		z-index: 1;
-		background-color: #fff;
+		background-color: var(--nav-background-color);
 		width: 100%;
 		min-height: 50px;
 		padding-bottom: env(safe-area-inset-bottom);
@@ -91,6 +101,7 @@ main{
 			display: flex;
 			flex-direction: column;
 			& svg{
+				fill: var(--text-color);
 				width: 35px;
 				flex-grow: 1;
 			}
@@ -120,4 +131,8 @@ map-embed{
 		position: relative;
 		z-index: 500;
 	}
+}
+
+tickets-list{
+	padding-bottom: calc(((100vh - 65px) - 55px) - 142*3px);
 }

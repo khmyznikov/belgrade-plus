@@ -1,8 +1,10 @@
 import { msg } from '@lit/localize';
 
-const zoneA = msg('zone A');
-const zoneB = msg('zone B');
-const zoneC = msg('zone C');
+const zoneA = msg(`zone A`);
+const zoneB = msg(`zone B`);
+const zoneC = msg(`zone C`);
+
+const din = msg(`rsd`);
 
 export const ticketsData = [
 	{
@@ -11,80 +13,80 @@ export const ticketsData = [
 		tickets: [
 			{
 				zone: zoneA,
-				price: '50 rsd',
+				price: `50`,
 				text: 'A90'
 			},
 			{
 				zone: zoneB,
-				price: '50 rsd',
+				price: `50`,
 				text: 'B90'
 			},
 			{
 				zone: zoneC,
-				price: '100 rsd',
+				price: `100`,
 				text: 'C90'
 			}
 		]
 	},
 	{
-		type: 'Daily ticket',
-		period: '1 day',
+		type: msg('Daily ticket'),
+		period: msg('1 day'),
 		tickets: [
 			{
 				zone: zoneA,
-				price: '120 rsd',
+				price: `120`,
 				text: 'A1'
 			},
 			{
 				zone: zoneB,
-				price: '120 rsd',
+				price: `120`,
 				text: 'B1'
 			},
 			{
 				zone: zoneC,
-				price: '150 rsd',
+				price: `150`,
 				text: 'C1'
 			}
 		]
 	},
 	{
-		type: 'Weekly ticket',
-		period: '7 days',
+		type: msg('Weekly ticket'),
+		period: msg('7 days'),
 		tickets: [
 			{
 				zone: 'zone A',
-				price: '800 rsd',
+				price: `800`,
 				text: 'A7'
 			},
 			{
 				zone: zoneB,
-				price: '800 rsd',
+				price: `800`,
 				text: 'B7'
 			},
 			{
 				zone: zoneC,
-				price: '1000 rsd',
+				price: `1000`,
 				text: 'C7'
 			}
 		]
 	},
 	{
-		type: 'Monthly ticket',
-		period: '30 days',
+		type: msg('Monthly ticket'),
+		period: msg('30 days'),
 		tickets: [
 			{
-				zone: 'zone A',
-				price: '2200 rsd',
+				zone: zoneA,
+				price: `2200`,
 				text: 'A30'
 			},
 			{
 				zone: zoneB,
-				price: '2200 rsd',
+				price: `2200`,
 				text: 'B30'
 			},
 			{
 				zone: zoneC,
-				price: '3300 rsd',
+				price: `3300`,
 				text: 'C30'
 			}
 		]
