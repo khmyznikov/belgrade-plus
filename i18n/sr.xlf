@@ -5,6 +5,27 @@
 <trans-unit id="scd69fbcb1b6e71f8">
   <source>90 min</source>
 </trans-unit>
+<trans-unit id="s695097ec01bd5830">
+  <source>Temporary ticket</source>
+</trans-unit>
+<trans-unit id="s025cbe62a454f96e">
+  <source>Daily ticket</source>
+</trans-unit>
+<trans-unit id="sd73e89fb5ca7534e">
+  <source>1 day</source>
+</trans-unit>
+<trans-unit id="scd02c0f8293a3c9e">
+  <source>Weekly ticket</source>
+</trans-unit>
+<trans-unit id="sd636599a979f0d59">
+  <source>7 days</source>
+</trans-unit>
+<trans-unit id="s950277fcc81aeb36">
+  <source>Monthly ticket</source>
+</trans-unit>
+<trans-unit id="s26156a5bcb44ac99">
+  <source>30 days</source>
+</trans-unit>
 <trans-unit id="s314498b3f9a324ec">
   <source>zone A</source>
 </trans-unit>
@@ -14,26 +35,45 @@
 <trans-unit id="s31449ab3f9a32852">
   <source>zone C</source>
 </trans-unit>
-<trans-unit id="s695097ec01bd5830">
-  <source>Temporary ticket</source>
-</trans-unit>
-<trans-unit id="sc30fb31cd2e39865">
-  <source>Click on the ticket to pay via SMS.</source>
-</trans-unit>
 <trans-unit id="sb4425e1a7661c95b">
   <source>Belgrade</source>
 </trans-unit>
 <trans-unit id="s9a69a1841d0753ae">
   <source>+plus</source>
 </trans-unit>
-<trans-unit id="s70322bc2ebdf730c">
-  <source>Zone A</source>
+<trans-unit id="sc30fb31cd2e39865">
+  <source>Click on the ticket to pay via SMS.</source>
 </trans-unit>
-<trans-unit id="s70322ec2ebdf7825">
-  <source>Zone B</source>
+<trans-unit id="sebdaf86117f49de7">
+  <source>zone</source>
 </trans-unit>
-<trans-unit id="s154129acce74239c">
-  <source> Zone C</source>
+<trans-unit id="s9d8b8aa2b404c2c8">
+  <source>Settings</source>
+</trans-unit>
+<trans-unit id="sefcf950b3cc4fc3b">
+  <source>Language</source>
+</trans-unit>
+<trans-unit id="saab875d8cfcfe712">
+  <source>Theme</source>
+</trans-unit>
+<trans-unit id="sdb73788b3c975f16">
+  <source>Auto</source>
+</trans-unit>
+<trans-unit id="s3b0ab4b52326316f">
+  <source>Light</source>
+</trans-unit>
+<trans-unit id="sac895c732f350ac5">
+  <source>Dark</source>
+</trans-unit>
+<trans-unit id="s0487f33d9ddaabde">
+  <source>About</source>
+</trans-unit>
+<trans-unit id="h5066c531a3f1f0fa">
+  <source> This application was created voluntarily as a gift to the city of Belgrade, as a gesture of gratitude for the friendship shared between Serbia and Russia.
+            <x id="0" equiv-text="&lt;br&gt;&lt;br&gt;"/>
+             The application is unofficial and does not have any agreements with the government. The SMS address, text, and transport zones were taken from official bus stop posters.
+            <x id="1" equiv-text="&lt;br&gt;&lt;br&gt;"/>
+             No fees are collected, and there are no ads or information tracking.</source>
 </trans-unit>
 </body>
 </file>

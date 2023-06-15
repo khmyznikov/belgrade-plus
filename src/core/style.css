@@ -70,6 +70,16 @@ main{
 				font-family: FuturaPTHeavy;
 				font-weight: unset;
 			}
+
+			.zone-a, .zone-b, .zone-c{
+				text-transform: capitalize;
+			}
+		}
+
+		@media screen and (max-width: 385px) {
+			#app-subtitle{
+				font-size: 18px;
+			}
 		}
 	}
 

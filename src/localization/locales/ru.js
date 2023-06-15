@@ -24,14 +24,13 @@
 'sac895c732f350ac5': `Тёмная`,
 'sb4425e1a7661c95b': `Белград`,
 'sc30fb31cd2e39865': `Нажмите на билет для СМС оплаты.`,
-'scaa82218f46e2fc0': `дин`,
 'scd02c0f8293a3c9e': `Недельный билет`,
 'scd69fbcb1b6e71f8': `90 мин`,
 'sd636599a979f0d59': `7 дней`,
 'sd73e89fb5ca7534e': `1 день`,
+'sdb73788b3c975f16': `Система`,
 'sebdaf86117f49de7': `зона`,
 'sefcf950b3cc4fc3b': `Язык`,
-'sdb73788b3c975f16': `Auto`,
 'h5066c531a3f1f0fa': html` This application was created voluntarily as a gift to the city of Belgrade, as a gesture of gratitude for the friendship shared between Serbia and Russia.
             <br><br>
              The application is unofficial and does not have any agreements with the government. The SMS address, text, and transport zones were taken from official bus stop posters.

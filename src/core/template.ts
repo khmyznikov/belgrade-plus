@@ -16,9 +16,9 @@ const template = (routeName: string) => {
                 <p id="app-subtitle">
                     ${routeName === 'home' ? html`${msg('Click on the ticket to pay via SMS.')}` : ''}
                     ${routeName === 'map' ? html`
-                    <strong class="zone-a">${msg('Zone A')}</strong>,
-                    <strong class="zone-b">${msg('Zone B')}</strong>,
-                    <span>${msg(' Zone C')}(<strong class="zone-a">A</strong>+<strong class="zone-b">B</strong>)</span>
+                    <strong class="zone-a">${msg('zone')} A</strong>,
+                    <strong class="zone-b">${msg('zone')} B</strong>,
+                    <span class="zone-c"> ${msg('zone')} C(<strong class="zone-a">A</strong>+<strong class="zone-b">B</strong>)</span>
                     ` : ''}
                 </p>
             </header>

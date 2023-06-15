@@ -5,7 +5,12 @@
     "ru",
     "sr"
   ],
-  "tsConfig": "tsconfig.json",
+  "inputFiles": [
+    "src/core/template.ts",
+    "src/components/map/map.ts",
+    "src/components/settings/settings.ts",
+    "src/components/tickets-list/data.ts"
+  ],
   "output": {
     "mode": "runtime",
     "outputDir": "src/localization/locales",

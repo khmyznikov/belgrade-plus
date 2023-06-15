@@ -1,5 +1,5 @@
 import { LitElement, html, unsafeCSS } from "lit";
-import { localized } from "@lit/localize";
+import { localized, msg } from "@lit/localize";
 import { property, customElement } from "lit/decorators.js";
 
 import { BusTicket } from "./bus-ticket/bus-ticket";
@@ -25,7 +25,7 @@ export class TicketsList extends LitElement {
       <dl class="tickets-list">
         ${ticketsData.map(
           (category) => html`
-            <dt><h3>${category.type}</h3><small>${category.period}</small></dt>
+            <dt><h3>${msg(category.type)}</h3><small>${msg(category.period)}</small></dt>
             ${category.tickets.map(
               (ticket) => html`
                 <dd>

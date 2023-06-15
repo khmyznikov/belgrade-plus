@@ -9,7 +9,11 @@
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      's9d8b8aa2b404c2c8': `Settings`,
+      'sb4425e1a7661c95b': `Belgrade`,
+'s9a69a1841d0753ae': `+plus`,
+'sc30fb31cd2e39865': `Click on the ticket to pay via SMS.`,
+'sebdaf86117f49de7': `zone`,
+'s9d8b8aa2b404c2c8': `Settings`,
 'sefcf950b3cc4fc3b': `Language`,
 'saab875d8cfcfe712': `Theme`,
 'sdb73788b3c975f16': `Auto`,
@@ -32,10 +36,5 @@
 'sd636599a979f0d59': `7 days`,
 's950277fcc81aeb36': `Monthly ticket`,
 's26156a5bcb44ac99': `30 days`,
-'scaa82218f46e2fc0': `din`,
-'sb4425e1a7661c95b': `Belgrade`,
-'s9a69a1841d0753ae': `+plus`,
-'sc30fb31cd2e39865': `Click on the ticket to pay via SMS.`,
-'sebdaf86117f49de7': `zone`,
     };
   
