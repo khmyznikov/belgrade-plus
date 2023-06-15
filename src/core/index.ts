@@ -33,7 +33,7 @@ export class CoreRoot extends LitElement {
 
 	async connectedCallback() {
 		try { 
-			await changeLocale(localStorage.getItem('locale') || navigator.language);
+			await changeLocale(localStorage.getItem('locale') || navigator.language, true);
 			document.documentElement.setAttribute('lang', currentLocale());
 		} catch {
 			console.warn(`bus-plus: localStorage is not available`);

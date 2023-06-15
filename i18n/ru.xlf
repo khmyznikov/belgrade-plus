@@ -36,7 +36,7 @@
 </trans-unit>
 <trans-unit id="sdb73788b3c975f16">
   <source>Auto</source>
-  <target>Система</target>
+  <target>Авто</target>
 </trans-unit>
 <trans-unit id="s3b0ab4b52326316f">
   <source>Light</source>
@@ -49,13 +49,6 @@
 <trans-unit id="s0487f33d9ddaabde">
   <source>About</source>
   <target>О приложении</target>
-</trans-unit>
-<trans-unit id="h5066c531a3f1f0fa">
-  <source> This application was created voluntarily as a gift to the city of Belgrade, as a gesture of gratitude for the friendship shared between Serbia and Russia.
-            <x id="0" equiv-text="&lt;br&gt;&lt;br&gt;"/>
-             The application is unofficial and does not have any agreements with the government. The SMS address, text, and transport zones were taken from official bus stop posters.
-            <x id="1" equiv-text="&lt;br&gt;&lt;br&gt;"/>
-             No fees are collected, and there are no ads or information tracking.</source>
 </trans-unit>
 <trans-unit id="s025cbe62a454f96e">
   <source>Daily ticket</source>
@@ -96,6 +89,22 @@
 <trans-unit id="s31449ab3f9a32852">
   <source>zone C</source>
   <target>зона C</target>
+</trans-unit>
+<trans-unit id="disclaimer">
+  <source> This application was created voluntarily as a gift to the city of Belgrade, as a gesture of gratitude for the friendship shared between Serbia and Russia.
+            <x id="0" equiv-text="&lt;br&gt;&lt;br&gt;"/>
+             The application is unofficial and does not have any agreements with the government. The SMS address, text, and transport zones were taken from official bus stop posters.
+            <x id="1" equiv-text="&lt;br&gt;&lt;br&gt;"/>
+             No fees are collected, and there are no ads or information tracking.</source>
+  <target> Это приложение было создано на добровольных началах в качестве подарка городу Белграду, и в знак дружбы между Сербией и Россией.
+            <x id="0" equiv-text="&lt;br&gt;&lt;br&gt;"/>
+             Приложение не является официальным и не имеет соглашений с правительством. Адреса СМС, текст и транспортные зоны взяты с официальных плакатов на автобусных остановках.
+            <x id="1" equiv-text="&lt;br&gt;&lt;br&gt;"/>
+             Комиссии не взимаются, рекламы нет, персональные данные не собираются.</target>
+</trans-unit>
+<trans-unit id="s89c7c21960d7e282">
+  <source>rsd</source>
+  <target>дин</target>
 </trans-unit>
 </body>
 </file>

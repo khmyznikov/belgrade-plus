@@ -29,7 +29,7 @@ p {
 	text-align: center;
 	letter-spacing: -1px;
 	display: grid;
-	grid-template-columns: min-content 1fr min-content;
+	grid-template-columns: minmax(min-content, 60px) 1fr minmax(min-content, 60px);
 	/* // filter: url("#ticket-warp");
 	// mix-blend-mode: multiply;
 	// transform: scale(0.95) translatex(-6px); */
@@ -56,12 +56,16 @@ a {
 }
 
 p .flaps {
+	display: flex;
+    align-items: center;
+    text-align: center;
+
 	font-family: "FuturaPTDemi";
 
 	font-size: 20px;
 	font-stretch: 85%;
 	font-weight: 400;
-	writing-mode: vertical-lr;
+	/* writing-mode: vertical-lr; */
 	border: 3.5px solid var(--border-color);
 	padding: 4px;
 	letter-spacing: 0.5px;

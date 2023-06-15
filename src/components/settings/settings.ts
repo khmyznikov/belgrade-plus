@@ -115,7 +115,7 @@ export class SettingsInfo extends LitElement {
             <br/><br/>
             &emsp;The application is unofficial and does not have any agreements with the government. The SMS address, text, and transport zones were taken from official bus stop posters.
             <br/><br/>
-            &emsp;No fees are collected, and there are no ads or information tracking.`)}</p>
+            &emsp;No fees are collected, and there are no ads or information tracking.`, {id: 'disclaimer'})}</p>
         <img id="friendship" width="174" src="${friendship}" alt="Rusko-Srpsko prijateljstvo"/>
       </aside>
     `;

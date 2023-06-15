@@ -4,6 +4,8 @@ const zoneA = msg(`zone A`);
 const zoneB = msg(`zone B`);
 const zoneC = msg(`zone C`);
 
+const din = msg(`rsd`);
+
 export const ticketsData = [
 	{
 		type: msg('Temporary ticket'),

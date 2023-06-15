@@ -5,8 +5,8 @@ import {
   allLocales
 } from './locale-codes';
 
-import * as ru from './locales/ru';
-import * as sr from './locales/sr';
+import * as ru from './locales/ru.js';
+import * as sr from './locales/sr.js';
 
 const localizedTemplates = new Map([
   ['ru', ru],
@@ -24,14 +24,16 @@ export const currentLocale = () => {
   return getLocale();
 };
 
-export const changeLocale = async (lang: string) => {
+export const changeLocale = async (lang: string, auto?: boolean) => {
   try {
     await setLocale(lang.slice(0, 2));
-    try {
-      localStorage.setItem('locale', lang.slice(0, 2));
-    }
-    catch {
-      console.warn(`bus-plus: localStorage is not available`);
+    if (!auto) {
+      try {
+        localStorage.setItem('locale', lang.slice(0, 2));
+      }
+      catch {
+        console.warn(`bus-plus: localStorage is not available`);
+      }
     }
   }
   catch {
