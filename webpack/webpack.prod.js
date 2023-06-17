@@ -20,6 +20,10 @@ export default merge(common, {
               {
                 from: "./staticwebapp.config.json",
                 to: "./",
+              },
+              {
+                from: "./static/*.*",
+                to: "./[name][ext]",
               }
             ]
         })

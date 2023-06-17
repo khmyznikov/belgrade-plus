@@ -5,7 +5,7 @@ import path, { resolve }  from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 export default merge(common, {
 	// plugins: [],
@@ -13,9 +13,9 @@ export default merge(common, {
         minimize: false,
     },
 	devServer: {
-		// static: {
-		// 	directory: resolve(__dirname, '../public')
-		// },
+		static: {
+			directory: resolve(__dirname, '../static')
+		},
 		historyApiFallback: {
 			index: '/'
 		},
