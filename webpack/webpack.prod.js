@@ -25,6 +25,11 @@ export default merge(common, {
                 from: "./static/*.*",
                 to: "./[name][ext]",
               }
+              ,
+              {
+                from: "./static/icons/*.*",
+                to: "./icons/[name][ext]",
+              }
             ]
         })
     ],
