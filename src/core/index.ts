@@ -2,7 +2,7 @@ import { LitElement, html, unsafeCSS } from 'lit';
 import { localized } from '@lit/localize';
 import { customElement } from 'lit/decorators.js';
 
-import { createRouter } from "@nanostores/router";
+import { createRouter, openPage } from "@nanostores/router";
 import { useStores } from '@nanostores/lit';
 
 import { changeLocale, currentLocale } from '../localization';
@@ -42,9 +42,17 @@ export class CoreRoot extends LitElement {
 		super.connectedCallback();
 	}
 
+	private openRoute = (event: Event, route: "home" | "map" | "settings") => {
+		event.preventDefault();
+		
+		this.shadowRoot?.getElementById('main')?.scrollTo(0, 0);
+		openPage(router, route);
+	}
+
 	render() {
 		return html`${template(
 				router.get()?.route || 'home',
+				this.openRoute,
 			)}`;
 	}
 }
