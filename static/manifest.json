@@ -1,0 +1,58 @@
+{
+	"id": "/",
+	"scope": "/",
+	"name": "Beograd Plus",
+	"display": "standalone",
+	"start_url": "/",
+	"short_name": "Belgrade.plus",
+	"theme_color": "#fbfbfb",
+	"description": "Bus and trams tickets for Belgrade, Serbia. Interactive map of transport zones.",
+	"orientation": "portrait",
+	"background_color": "#fbfbfb",
+	"related_applications": [],
+	"prefer_related_applications": false,
+	"display_override": ["window-controls-overlay"],
+	"icons": [
+	  {
+		"src": "icons/app-icon-any@512.webp",
+		"sizes": "512x512",
+		"type": "image/webp",
+		"purpose": "any"
+	  },
+	  {
+		"src": "icons/app-icon-any@512.png",
+		"sizes": "512x512",
+		"type": "image/png",
+		"purpose": "any"
+	  },
+	  {
+		"src": "icons/app-icon-maskable@512.webp",
+		"sizes": "512x512",
+		"type": "image/webp",
+		"purpose": "maskable"
+	  },
+	  {
+		"src": "icons/app-icon-maskable@512.png",
+		"sizes": "512x512",
+		"type": "image/png",
+		"purpose": "maskable"
+	  },
+	  {
+		"src": "icons/app-icon-any@192.webp",
+		"sizes": "192x192",
+		"type": "image/webp",
+		"purpose": "any"
+	  },
+	  {
+		"src": "icons/app-icon-any@192.png",
+		"sizes": "192x192",
+		"type": "image/png",
+		"purpose": "any"
+	  }
+	],
+	"categories": [
+	  "navigation",
+	  "travel",
+	  "utilities"
+	]
+  }
