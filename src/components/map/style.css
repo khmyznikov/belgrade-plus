@@ -100,6 +100,10 @@
 		}
 	}
 
+	&.leaflet-container{
+		background-color: var(--background-color);
+	}
+
 	&[data-theme='dark'] {
 		.leaflet-tile-container{
 			filter: grayscale(40%) contrast(0.7);

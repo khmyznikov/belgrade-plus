@@ -2,7 +2,7 @@ main{
 	font-family: 'FuturaPTLight';
 	height: 100%;
 
-	scroll-snap-type: y mandatory;
+	scroll-snap-type: y proximity;
     scroll-padding: 70px;
     overflow-y: auto;
 
