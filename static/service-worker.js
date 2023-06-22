@@ -3,8 +3,8 @@ var buildTimestamp = BUILD_TIMESTAMP;
 var cacheName = 'belgrade.plus/' + buildTimestamp;
 var filesToCache = [
 	'/',
-	// '/map',
-	// '/settings'
+	'/map',
+	'/settings'
 ];
 
 var bundleToCache = self.__WB_MANIFEST;
