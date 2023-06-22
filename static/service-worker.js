@@ -24,7 +24,7 @@ self.addEventListener('install', function (e) {
 		})
 	);
 
-	self.skipWaiting();
+	// self.skipWaiting();
 });
 
 
@@ -33,7 +33,7 @@ self.addEventListener('activate', function (e) {
 	e.waitUntil(
 		caches.keys().then(function (keyList) {
 			return Promise.all(keyList.map(function (key) {
-				if (key !== cacheName) {
+				if (key !== cacheName && key !== 'belgrade.plus/map-tiles') {
 					console.log('[ServiceWorker] Removing old cache', key);
 					return caches.delete(key);
 				}
@@ -43,10 +43,24 @@ self.addEventListener('activate', function (e) {
 	return self.clients.claim();
 });
 
-self.addEventListener('fetch', function (e) {
-    e.respondWith(
-        caches.match(e.request, { ignoreSearch: true }).then(function (response) {
-            return response || fetch(e.request);
-        })
-    );
+async function handleRequest(request) {
+	if (request.url.includes('tileserver.memomaps.de')) {
+		try {
+			const response = await fetch(request);
+			const cache = await caches.open('belgrade.plus/map-tiles')
+			await cache.put(request, response.clone());
+			
+			return response
+		}
+		catch (e) {
+			return await caches.match(request);
+		}
+	}
+	else {
+		return await caches.match(request, { ignoreSearch: true }) || await fetch(request);
+	}
+  }
+
+self.addEventListener('fetch', async function (event) {
+	event.respondWith(handleRequest(event.request));
 });
