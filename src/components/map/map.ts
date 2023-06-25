@@ -37,7 +37,7 @@ export class MapEmbed extends LitElement {
       .setView([44.8133, 20.4559], 11);
     leaflet
       .tileLayer("https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png", {
-        maxZoom: MAX_ZOOM,
+        maxZoom: MAX_ZOOM
       })
       .addTo(this.map);
 

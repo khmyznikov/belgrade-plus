@@ -5,6 +5,7 @@ import { merge }  from 'webpack-merge';
 import TerserPlugin from 'terser-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
+import { InjectManifest } from "workbox-webpack-plugin";
 
 export default merge(common, {
     output: {
@@ -15,6 +16,12 @@ export default merge(common, {
         new webpack.optimize.LimitChunkCountPlugin({
             maxChunks: 1
         }),
+        new InjectManifest({
+            swSrc: './static/service-worker.js',
+            swDest: 'service-worker.js',
+            maximumFileSizeToCacheInBytes: 10485760,
+            exclude: [/staticwebapp\.config\.json$/, /index\.html$/],
+        }),
         new CopyPlugin({
             patterns: [
               {
@@ -24,8 +31,7 @@ export default merge(common, {
               {
                 from: "./static/*.*",
                 to: "./[name][ext]",
-              }
-              ,
+              },
               {
                 from: "./static/icons/*.*",
                 to: "./icons/[name][ext]",

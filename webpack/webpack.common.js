@@ -1,14 +1,22 @@
 import path, { resolve } from "path";
 import { fileURLToPath } from "url";
+
+import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
 
 import autoprefixer from "autoprefixer";
 import postcssNesting from "postcss-nesting";
 import cssnano from "cssnano";
 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+
+const build_date = new Date(Date.now())
+const buildTimestamp = `${build_date.getDate()}.${build_date.getMonth() + 1}.${build_date.getFullYear()}/${build_date.getHours()}:${build_date.getMinutes()}:${build_date.getSeconds()}`
 
 export default {
   module: {
@@ -96,6 +104,9 @@ export default {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      BUILD_TIMESTAMP: JSON.stringify(buildTimestamp),
+    }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       inject: "head",
