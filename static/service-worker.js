@@ -1,4 +1,9 @@
-var buildTimestamp = BUILD_TIMESTAMP;
+var buildTimestamp = null;
+try {
+	buildTimestamp = BUILD_TIMESTAMP;
+} catch (error) {
+	buildTimestamp = Date.now();
+}
 
 var cacheName = 'belgrade.plus/' + buildTimestamp;
 var filesToCache = [
@@ -8,7 +13,6 @@ var filesToCache = [
 ];
 
 var bundleToCache = self.__WB_MANIFEST;
-
 if (bundleToCache)
 	bundleToCache.forEach((file) => {
 		filesToCache.push(file.url);
