@@ -7,6 +7,8 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { InjectManifest } from "workbox-webpack-plugin";
 
+import { BundleAnalyzerPlugin }  from 'webpack-bundle-analyzer';
+
 export default merge(common, {
     output: {
         filename: 'busplus.bundle.[contenthash].js',
@@ -37,7 +39,8 @@ export default merge(common, {
                 to: "./icons/[name][ext]",
               }
             ]
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ],
 	optimization: {
         minimize: true,

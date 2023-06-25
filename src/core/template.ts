@@ -36,7 +36,7 @@ const template = (routeName: string, openRoute: (event: Event, route: "home" | "
                 </a>
             </nav>
         </main>
-
+        <pwa-install manual-apple="true" manual-chrome="true"></pwa-install>
         `;
 };
 export default template;

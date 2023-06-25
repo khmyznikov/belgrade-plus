@@ -6,6 +6,7 @@ import { createRouter, openPage } from "@nanostores/router";
 import { useStores } from '@nanostores/lit';
 
 import { changeLocale, currentLocale } from '../localization';
+import '@khmyznikov/pwa-install';
 import '../components/tickets-list/tickets-list';
 import '../components/settings/settings';
 import '../components/map/map';
