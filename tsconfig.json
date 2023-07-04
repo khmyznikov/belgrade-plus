@@ -29,6 +29,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
     "plugins": [
       {
         "name": "typescript-lit-html-plugin"

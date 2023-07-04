@@ -40,8 +40,6 @@
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.0",
     "postcss-nesting": "^11.2.2",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.2.2",
     "terser-webpack-plugin": "^5.3.8",
     "ts-loader": "9.4.2",
     "typescript": "^5.0.4",
@@ -54,7 +52,7 @@
     "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
-    "@khmyznikov/pwa-install": "file:../pwa-install",
+    "@khmyznikov/pwa-install": "^0.2.5",
     "@lit/localize": "^0.11.4",
     "@nanostores/lit": "^0.1.4",
     "@nanostores/router": "^0.11.0",

@@ -48,9 +48,9 @@ export class CoreRoot extends LitElement {
 
 	protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		this.appInstall = this.shadowRoot?.querySelector('pwa-install');
-		setTimeout(() => {
-			this.appInstall?.showDialog();
-		}, 1000);
+		this.addEventListener('ticket-clicked', (event: Event) => {
+			this.appInstall?.isInstallAvailable && this.appInstall?.userChoiceResult != 'dismissed' && this.appInstall?.showDialog();
+		});
 	}
 
 	private openRoute = (event: Event, route: "home" | "map" | "settings") => {
