@@ -31,7 +31,8 @@ export class MapEmbed extends LitElement {
 
   //   }
 
-  firstUpdated() {
+  async firstUpdated() {
+    const leaflet = await import("leaflet");
     this.map = leaflet
       .map((this.renderRoot?.querySelector("#map") as HTMLElement) || "map")
       .setView([44.8133, 20.4559], 11);

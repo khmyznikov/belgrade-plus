@@ -8,7 +8,7 @@
 	"theme_color": "#fbfbfb",
 	"description": "Bus and trams tickets for Belgrade, Serbia. Interactive map of transport zones.",
 	"orientation": "portrait",
-	"background_color": "#c93b23",
+	"background_color": "#ef2d1d",
 	"related_applications": [],
 	"prefer_related_applications": false,
 	"display_override": ["window-controls-overlay"],

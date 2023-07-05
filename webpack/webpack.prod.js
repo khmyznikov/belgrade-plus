@@ -15,9 +15,9 @@ export default merge(common, {
     },
 	plugins: [
         new CleanWebpackPlugin(),   
-        new webpack.optimize.LimitChunkCountPlugin({
-            maxChunks: 1
-        }),
+        // new webpack.optimize.LimitChunkCountPlugin({
+        //     maxChunks: 1
+        // }),
         new InjectManifest({
             swSrc: './static/service-worker.js',
             swDest: 'service-worker.js',
@@ -40,7 +40,7 @@ export default merge(common, {
               }
             ]
         }),
-        new BundleAnalyzerPlugin()
+        // new BundleAnalyzerPlugin()
     ],
 	optimization: {
         minimize: true,
