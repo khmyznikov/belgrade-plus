@@ -1,11 +1,12 @@
-import { LitElement, html, unsafeCSS } from 'lit';
+import { LitElement, PropertyValueMap, html, unsafeCSS } from 'lit';
 import { localized } from '@lit/localize';
-import { customElement } from 'lit/decorators.js';
+import { customElement, query, queryAsync } from 'lit/decorators.js';
 
 import { createRouter, openPage } from "@nanostores/router";
 import { useStores } from '@nanostores/lit';
 
 import { changeLocale, currentLocale } from '../localization';
+import '@khmyznikov/pwa-install';
 import '../components/tickets-list/tickets-list';
 import '../components/settings/settings';
 import '../components/map/map';
@@ -15,6 +16,7 @@ import template from './template';
 
 import "../index.css";
 import { setThemeMode } from '../components/settings/theme.helper';
+import { PWAInstallElement } from '@khmyznikov/pwa-install';
 
 const router = createRouter({
 	home: '/',
@@ -31,6 +33,8 @@ export class CoreRoot extends LitElement {
 		return [  unsafeCSS(styles) ];
 	}
 
+	private appInstall: PWAInstallElement | null | undefined = null;
+
 	async connectedCallback() {
 		try { 
 			await changeLocale(localStorage.getItem('locale') || navigator.language, true);
@@ -40,6 +44,13 @@ export class CoreRoot extends LitElement {
 		}
 		setThemeMode();
 		super.connectedCallback();
+	}
+
+	protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+		this.appInstall = this.shadowRoot?.querySelector('pwa-install');
+		this.addEventListener('ticket-clicked', (event: Event) => {
+			this.appInstall?.isInstallAvailable && this.appInstall?.userChoiceResult != 'dismissed' && this.appInstall?.showDialog();
+		});
 	}
 
 	private openRoute = (event: Event, route: "home" | "map" | "settings") => {

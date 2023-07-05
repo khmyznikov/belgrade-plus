@@ -7,15 +7,17 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { InjectManifest } from "workbox-webpack-plugin";
 
+import { BundleAnalyzerPlugin }  from 'webpack-bundle-analyzer';
+
 export default merge(common, {
     output: {
         filename: 'busplus.bundle.[contenthash].js',
     },
 	plugins: [
         new CleanWebpackPlugin(),   
-        new webpack.optimize.LimitChunkCountPlugin({
-            maxChunks: 1
-        }),
+        // new webpack.optimize.LimitChunkCountPlugin({
+        //     maxChunks: 1
+        // }),
         new InjectManifest({
             swSrc: './static/service-worker.js',
             swDest: 'service-worker.js',
@@ -37,7 +39,8 @@ export default merge(common, {
                 to: "./icons/[name][ext]",
               }
             ]
-        })
+        }),
+        // new BundleAnalyzerPlugin()
     ],
 	optimization: {
         minimize: true,
