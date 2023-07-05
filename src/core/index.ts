@@ -16,7 +16,9 @@ import template from './template';
 
 import "../index.css";
 import { setThemeMode } from '../components/settings/theme.helper';
+
 import { PWAInstallElement } from '@khmyznikov/pwa-install';
+import { TrackEvent, TrackPage } from '../components/analytics.helper';
 
 const router = createRouter({
 	home: '/',
@@ -43,14 +45,26 @@ export class CoreRoot extends LitElement {
 			console.warn(`bus-plus: localStorage is not available`);
 		}
 		setThemeMode();
+
+		TrackPage(router.get()?.route || 'home');
 		super.connectedCallback();
 	}
 
 	protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		this.appInstall = this.shadowRoot?.querySelector('pwa-install');
-		this.addEventListener('ticket-clicked', (event: Event) => {
-			this.appInstall?.isInstallAvailable && this.appInstall?.userChoiceResult != 'dismissed' && this.appInstall?.showDialog();
+
+		this.appInstall?.addEventListener('pwa-user-choice-result-event', (event) => {
+			TrackEvent('pwa-user-choice', (<CustomEvent>event).detail);
 		});
+
+		this.addEventListener('ticket-clicked', (event) => {
+			this.appInstall?.isInstallAvailable && this.appInstall?.userChoiceResult != 'dismissed' && this.appInstall?.showDialog();
+			TrackEvent('ticket-clicked', (<CustomEvent>event).detail);
+		});
+
+		if (this.appInstall?.isUnderStandaloneMode) {
+			TrackEvent('pwa-standalone-mode');
+		}
 	}
 
 	private openRoute = (event: Event, route: "home" | "map" | "settings") => {
@@ -58,6 +72,7 @@ export class CoreRoot extends LitElement {
 		
 		this.shadowRoot?.getElementById('main')?.scrollTo(0, 0);
 		openPage(router, route);
+		TrackPage(route);
 	}
 
 	render() {
