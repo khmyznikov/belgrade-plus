@@ -5,7 +5,7 @@
 	"display": "standalone",
 	"start_url": "/",
 	"short_name": "Belgrade.plus",
-	"theme_color": "#fbfbfb",
+	"theme_color": "#ef2d1d",
 	"description": "Bus and trams tickets for Belgrade, Serbia. Interactive map of transport zones.",
 	"orientation": "portrait",
 	"background_color": "#ef2d1d",
