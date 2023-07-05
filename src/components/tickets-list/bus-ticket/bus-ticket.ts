@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { localized, msg } from '@lit/localize';
-import { property, customElement } from 'lit/decorators.js';
+import { property, customElement, eventOptions } from 'lit/decorators.js';
 
 // import styles from './style.scss';
 
@@ -20,7 +20,8 @@ export class BusTicket extends LitElement {
 		return this;
 	}
 	
-	private ticketClicked = () => {
+	@eventOptions({passive: true, once: true})
+	private ticketClicked(){
 		this.dispatchEvent(this.TicketClicked);
 	}
 
