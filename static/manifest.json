@@ -12,6 +12,13 @@
 	"related_applications": [],
 	"prefer_related_applications": false,
 	"display_override": ["window-controls-overlay"],
+	"launch_handler": {
+		"client_mode": "navigate-existing"
+	},
+	"handle_links": "preferred",
+	"side_panel": {
+		"preferred_width": 414
+	},
 	"icons": [
 	  {
 		"src": "icons/app-icon-any@512.webp",
@@ -49,6 +56,37 @@
 		"type": "image/png",
 		"purpose": "any"
 	  }
+	],
+	"screenshots" : [
+		{
+		  "src": "screenshots/screenshot_dark_1.jpg",
+		  "sizes": "752x1388",
+		  "type": "image/jpg",
+		  "form_factor": "narrow",
+		  "label": "Tickets list dark theme"
+		},
+		{
+			"src": "screenshots/screenshot_dark_2.jpg",
+			"sizes": "752x1388",
+			"type": "image/jpg",
+			"form_factor": "narrow",
+			"label": "Zones map dark theme"
+		},
+		{
+			"src": "screenshots/screenshot_light_1.jpg",
+			"sizes": "752x1388",
+			"type": "image/jpg",
+			"form_factor": "narrow",
+			"label": "Tickets list light theme"
+		}
+		,
+		{
+			"src": "screenshots/screenshot_light_2.jpg",
+			"sizes": "752x1388",
+			"type": "image/jpg",
+			"form_factor": "narrow",
+			"label": "Zones map light theme"
+		}
 	],
 	"categories": [
 	  "navigation",
