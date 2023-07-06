@@ -22,7 +22,7 @@ export default merge(common, {
             swSrc: './static/service-worker.js',
             swDest: 'service-worker.js',
             maximumFileSizeToCacheInBytes: 10485760,
-            exclude: [/staticwebapp\.config\.json$/, /index\.html$/],
+            exclude: [/staticwebapp\.config\.json$/, /index\.html$/, /screenshot.*\.jpg$/],
         }),
         new CopyPlugin({
             patterns: [
@@ -37,6 +37,11 @@ export default merge(common, {
               {
                 from: "./static/icons/*.*",
                 to: "./icons/[name][ext]",
+              }
+              ,
+              {
+                from: "./static/screenshots/*.*",
+                to: "./screenshots/[name][ext]",
               }
             ]
         }),
