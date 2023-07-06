@@ -2,6 +2,7 @@ import { LitElement, html, unsafeCSS } from "lit";
 import { localized } from "@lit/localize";
 import { customElement, property } from "lit/decorators.js";
 import { getThemeMode } from "../settings/theme.helper";
+import { TrackEvent } from '../../components/analytics.helper';
 
 import leafletstyle from "leaflet/dist/leaflet.css";
 import leaflet, { LatLngExpression } from "leaflet";
@@ -73,11 +74,13 @@ export class MapEmbed extends LitElement {
       this.locationStatus = '';
       marker.setLatLng(e.latlng).addTo(this.map!);
       this.map?.setView(e.latlng, MAX_ZOOM - 1 , { animate: true });
-      console.log(e);
+      TrackEvent('location-found');
+      // console.log(e);
     });
     this.map.on("locationerror", (e) => {
       this.locationStatus = 'error';
-      console.log(e);
+      TrackEvent('location-error');
+      // console.log(e);
     });
 
   }
@@ -88,6 +91,7 @@ export class MapEmbed extends LitElement {
   findMe() {
     this.locationStatus = 'loading';
     this.map!.locate({ setView: false, enableHighAccuracy: true, timeout: 20000});
+    TrackEvent('location-requested');
   }
 
   render() {
