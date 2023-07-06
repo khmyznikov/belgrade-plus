@@ -16,7 +16,7 @@
 		"client_mode": "navigate-existing"
 	},
 	"handle_links": "preferred",
-	"side_panel": {
+	"edge_side_panel": {
 		"preferred_width": 414
 	},
 	"icons": [
