@@ -41,6 +41,7 @@ export class CoreRoot extends LitElement {
 		try { 
 			await changeLocale(localStorage.getItem('locale') || navigator.language, true);
 			document.documentElement.setAttribute('lang', currentLocale());
+			TrackEvent('locale', {lang: currentLocale()});
 		} catch {
 			console.warn(`bus-plus: localStorage is not available`);
 		}
