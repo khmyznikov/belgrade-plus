@@ -1,0 +1,11 @@
+[
+	{
+	  "relation": ["delegate_permission/common.handle_all_urls"],
+	  "target": {
+		"namespace": "android_app",
+		"package_name": "plus.belgrade.twa",
+		"sha256_cert_fingerprints":
+		  ["3B:BD:6F:B5:F6:D0:3D:25:D8:19:DD:48:98:58:E1:16:72:AF:0C:07:C8:06:17:C1:30:C1:60:5B:1C:5E:B5:A8"]
+	  }
+	}
+  ]
