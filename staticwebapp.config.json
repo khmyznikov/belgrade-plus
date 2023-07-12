@@ -7,6 +7,10 @@
 		{
 			"route": "/settings*",
 			"rewrite": "/index.html"
+		},
+		{
+			"route": "/privacy*",
+			"rewrite": "/privacy.html"
 		}
 	],
 	"navigationFallback": {

@@ -43,6 +43,11 @@ export default merge(common, {
                 from: "./static/screenshots/*.*",
                 to: "./screenshots/[name][ext]",
               }
+              ,
+              {
+                from: "./static/.well-known/*.*",
+                to: "./.well-known/[name][ext]",
+              },
             ]
         }),
         // new BundleAnalyzerPlugin()

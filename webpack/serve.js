@@ -24,4 +24,8 @@ app.get('/settings', function(req, res) {
 	res.sendFile('index.html', { root: __dirname + '/../dist' });
 });
 
+app.get('/privacy', function(req, res) {
+	res.sendFile('privacy.html', { root: __dirname + '/../dist' });
+});
+
 app.listen(port, () => console.log(`App running on ${port}.`));
