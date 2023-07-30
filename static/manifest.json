@@ -4,12 +4,17 @@
 	"name": "Beograd Plus",
 	"display": "standalone",
 	"start_url": "/",
-	"short_name": "Belgrade.plus",
+	"short_name": "BelgradePlus",
 	"theme_color": "#ef2d1d",
 	"description": "Bus and trams tickets for Belgrade, Serbia. Interactive map of transport zones.",
 	"orientation": "portrait",
 	"background_color": "#ef2d1d",
-	"related_applications": [],
+	"related_applications": [
+		{
+			"platform": "webapp",
+			"url": "./manifest.json"
+		}
+	],
 	"prefer_related_applications": false,
 	"display_override": ["window-controls-overlay"],
 	"launch_handler": {

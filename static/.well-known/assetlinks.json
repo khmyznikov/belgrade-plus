@@ -5,7 +5,8 @@
 		"namespace": "android_app",
 		"package_name": "plus.belgrade.twa",
 		"sha256_cert_fingerprints":
-		  ["3B:BD:6F:B5:F6:D0:3D:25:D8:19:DD:48:98:58:E1:16:72:AF:0C:07:C8:06:17:C1:30:C1:60:5B:1C:5E:B5:A8"]
+		  ["3B:BD:6F:B5:F6:D0:3D:25:D8:19:DD:48:98:58:E1:16:72:AF:0C:07:C8:06:17:C1:30:C1:60:5B:1C:5E:B5:A8",
+		  "B0:F3:8E:F9:5D:5A:EB:43:B5:4C:8F:6B:3E:CF:CD:4A:6F:8B:BF:C0:72:D1:61:9F:D9:18:5B:81:4E:99:B8:4A"]
 	  }
 	}
   ]
