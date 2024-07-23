@@ -68,11 +68,28 @@ export class CoreRoot extends LitElement {
 		}
 	}
 
-	private openRoute = (event: Event, route: "home" | "map" | "settings") => {
+	private openRoute = async (event: Event, route: "home" | "map" | "settings") => {
 		event.preventDefault();
+
+		if (router.get()?.route === 'home' ){
+			this.shadowRoot?.getElementById('main')?.scrollTo(0, 0);
+		}
 		
-		this.shadowRoot?.getElementById('main')?.scrollTo(0, 0);
-		openPage(router, route);
+		if (!document.startViewTransition) {
+			openPage(router, route);
+			return;
+		}
+		else {
+	
+			await document.startViewTransition({
+				// @ts-ignore
+				update: async () => { 
+					openPage(router, route);
+					await this.updateComplete; 
+				},
+				types: [route == "map" || (route == "home" && router.get()?.route === 'settings' ) ? 'backwards' : 'forwards']
+			});
+		}
 		TrackPage(route);
 	}
 

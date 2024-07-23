@@ -1,89 +1,97 @@
-main{
-	font-family: 'FuturaPTLight';
-	height: 100%;
-
-	scroll-snap-type: y proximity;
-    scroll-padding: 70px;
-    overflow-y: auto;
-
-	display: flex;
-    flex-direction: column;
+.grid{
+	display: grid;
+	grid-template-rows: 1fr 50px;
+    height: 100%;
     align-items: stretch;
 
-	&.settings-active{
-		scroll-padding: 10px;
-	}
+	main{
+		font-family: 'FuturaPTLight';
+		height: 100%;
+		/* margin-bottom: 50px; */
 
-	& header{
-		user-select: none;
+		/* scroll-snap-type: y proximity;
+		scroll-padding: 70px;
+		overflow-y: auto; */
 
-		display: grid;
-		grid-template-columns: min-content 1fr;
-    	grid-template-rows: min-content;
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
 
-		margin: 10px 10px;
-
-		scroll-snap-align: start;
-
-		#app-logo{
-			width: 60px;
-			margin-right: 10px;
-			grid-area: 1 / 1 / 3 / 2;
-		}
-		#app-title{
-			display: flex;
-			align-items: flex-start;
-			
-			grid-area: 1 / 2 / 2 / 3;
-			margin: 0;
-
-			height: 45px;
-
-			& span {
-				font-family: 'FuturaPTLight';
-				font-size: 40px;
-				text-transform: uppercase;
-			}
-
-			& small{
-				font-family: 'FuturaPTDemi';
-				font-size: 30px;
-				line-height: 28px;
-				text-transform: lowercase;
-
-				color: var(--zone-a-color);
-			}
-		}
-		#app-subtitle{
-			grid-area: 2 / 2 / 3 / 3;
-			margin: 0;
-
-			font-size: 20px;
-
-			.zone-a{
-				color: var(--zone-a-color);
-			}
-
-			.zone-b{
-				color: var(--zone-b-color);
-			}
-
-			.zone-a, .zone-b{
-				font-family: FuturaPTHeavy;
-				font-weight: unset;
-			}
-
-			.zone-a, .zone-b, .zone-c{
-				text-transform: capitalize;
-			}
+		&.settings-active, &.home-active{
+			overflow: hidden;
 		}
 
-		@media screen and (max-width: 385px) {
+		& header{
+			user-select: none;
+
+			display: grid;
+			grid-template-columns: min-content 1fr;
+			grid-template-rows: min-content;
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+
+			margin: 10px 10px;
+
+			scroll-snap-align: start;
+
+			#app-logo{
+				width: 60px;
+				margin-right: 10px;
+				grid-area: 1 / 1 / 3 / 2;
+			}
+			#app-title{
+				display: flex;
+				align-items: flex-start;
+				
+				grid-area: 1 / 2 / 2 / 3;
+				margin: 0;
+
+				height: 45px;
+
+				& span {
+					font-family: 'FuturaPTLight';
+					font-size: 40px;
+					text-transform: uppercase;
+				}
+
+				& small{
+					font-family: 'FuturaPTDemi';
+					font-size: 30px;
+					line-height: 28px;
+					text-transform: lowercase;
+
+					color: var(--zone-a-color);
+				}
+			}
 			#app-subtitle{
-				font-size: 18px;
-				letter-spacing: -0.1px;
+				grid-area: 2 / 2 / 3 / 3;
+				margin: 0;
+
+				font-size: 20px;
+
+				.zone-a{
+					color: var(--zone-a-color);
+				}
+
+				.zone-b{
+					color: var(--zone-b-color);
+				}
+
+				.zone-a, .zone-b{
+					font-family: FuturaPTHeavy;
+					font-weight: unset;
+				}
+
+				.zone-a, .zone-b, .zone-c{
+					text-transform: capitalize;
+				}
+			}
+
+			@media screen and (max-width: 385px) {
+				#app-subtitle{
+					font-size: 18px;
+					letter-spacing: -0.1px;
+				}
 			}
 		}
 	}
@@ -91,15 +99,17 @@ main{
 	#navigation-bar{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		position: fixed;
-		bottom: 0;
-		z-index: 1;
+
 		background-color: var(--nav-background-color);
 		width: 100%;
 		min-height: 50px;
 		padding-bottom: env(safe-area-inset-bottom);
 
 		filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 8px);
+
+		svg{
+			transition: fill .25s;
+		}
 
 		.link-button{
 			align-items: center;
@@ -128,16 +138,23 @@ main{
 			}
 		}
 	}
+
 }
 
 map-embed{
-	display: contents;
-	+ #navigation-bar{
-		position: relative;
-		z-index: 500;
-	}
+	height: 100%;
+}
+settings-info{
+	overflow-y: auto;
 }
 
 tickets-list{
-	padding-bottom: calc(((100vh - 65px) - 55px) - 142*3px);
+	/* padding-bottom: calc(((100vh - 72px - 65px) - 50px) - (( 142 + 15 ) * 3px) - 35px); */
+
+	/* margin-bottom: 50px; */
+    overflow-y: auto;
+    scroll-padding: 70px;
+    scroll-snap-type: y mandatory;
 }
+
+

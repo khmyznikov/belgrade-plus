@@ -4,6 +4,8 @@
 	flex-direction: column-reverse;
 	align-items: flex-end;
 
+	height: 100%;
+
 	--icon-color: var(--text-color);
 	--error-color: rgb(255, 0, 0);
 	--loading-color: var(--text-color);

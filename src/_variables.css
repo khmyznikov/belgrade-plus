@@ -26,8 +26,9 @@
 	:root{
 		--text-color: #f5f5f5;
 		--background-color: #1d1d1d;
-
 		--nav-background-color: #212121;
+
+		color-scheme: dark;
 	}
 }
 
@@ -36,10 +37,14 @@ html[data-theme='light'] {
 	--text-color: #0c0c0c;
 	--background-color: #fbfbfb;
 	--nav-background-color: #fcfcfc;
+
+	color-scheme: light;
 }
 
 html[data-theme='dark'] {
 	--text-color: #f5f5f5;
 	--background-color: #1d1d1d;
 	--nav-background-color: #212121;
+	
+	color-scheme: dark;
 }
