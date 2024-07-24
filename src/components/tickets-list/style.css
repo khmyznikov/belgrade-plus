@@ -22,7 +22,8 @@
     align-items: center;
     gap: 15px;
     padding: 10px 15px;
-    margin: 5px 0;
+    padding-top: 15px;
+    margin-bottom: 5px;
     & h3 {
       margin: 0;
       flex-grow: 1;

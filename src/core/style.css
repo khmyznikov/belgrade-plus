@@ -1,8 +1,10 @@
 .grid{
 	display: grid;
-	grid-template-rows: 1fr 50px;
+	grid-template-rows: 1fr calc(50px + env(safe-area-inset-bottom));
     height: 100%;
     align-items: stretch;
+
+	/* overflow: hidden; */
 
 	main{
 		font-family: 'FuturaPTLight';
@@ -115,6 +117,8 @@
 			align-items: center;
 			display: flex;
 			flex-direction: column;
+
+			-webkit-tap-highlight-color: transparent;
 			& svg{
 				fill: var(--text-color);
 				width: 35px;
@@ -149,7 +153,7 @@ settings-info{
 }
 
 tickets-list{
-	padding-bottom: calc(((100vh - 72px - 65px) - 50px) - (( 142 + 15 ) * 3px) - 35px);
+	padding-bottom: calc(((100svh - 72px - 65px) - 50px) - (( 136 + 15 ) * 3px) - 35px);
 
     overflow-y: auto;
     scroll-padding: 70px;
