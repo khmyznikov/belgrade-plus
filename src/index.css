@@ -64,12 +64,19 @@ body{
 	animation-duration: .25s;
 }
 
-:root{
+:root {
 	view-transition-name: none;
 }
-core-root::part(content){
-	view-transition-name: content;
+
+html:active-view-transition-type(forwards, backwards) {
+	core-root::part(content){
+		view-transition-name: content;
+	}
+	core-root::part(header){
+		view-transition-name: header;
+	}
 }
+
 
 html:active-view-transition-type(forwards) {
 	&::view-transition-old(content) {

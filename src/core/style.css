@@ -108,7 +108,7 @@
 		filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 8px);
 
 		svg{
-			transition: fill .25s;
+			transition: fill .3s;
 		}
 
 		.link-button{
@@ -149,9 +149,8 @@ settings-info{
 }
 
 tickets-list{
-	/* padding-bottom: calc(((100vh - 72px - 65px) - 50px) - (( 142 + 15 ) * 3px) - 35px); */
+	padding-bottom: calc(((100vh - 72px - 65px) - 50px) - (( 142 + 15 ) * 3px) - 35px);
 
-	/* margin-bottom: 50px; */
     overflow-y: auto;
     scroll-padding: 70px;
     scroll-snap-type: y mandatory;

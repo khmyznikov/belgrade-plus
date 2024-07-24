@@ -9,7 +9,7 @@ const template = (routeName: string, openRoute: (event: Event, route: "home" | "
     return html`
         <div class="grid">
             <main class="${routeName}-active" id="main">
-                <header>
+                <header part="header">
                     <img id="app-logo" src="${logo}" alt="Belgrade +plus logo"/>
 
                     <h1 id="app-title"><span>${msg('Belgrade')}</span><small>${msg('+plus')}</small></h1>

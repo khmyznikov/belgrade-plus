@@ -70,10 +70,6 @@ export class CoreRoot extends LitElement {
 
 	private openRoute = async (event: Event, route: "home" | "map" | "settings") => {
 		event.preventDefault();
-
-		if (router.get()?.route === 'home' ){
-			this.shadowRoot?.getElementById('main')?.scrollTo(0, 0);
-		}
 		
 		if (!document.startViewTransition) {
 			openPage(router, route);
