@@ -70,6 +70,9 @@ export class CoreRoot extends LitElement {
 
 	private openRoute = async (event: Event, route: "home" | "map" | "settings") => {
 		event.preventDefault();
+
+		if (route == router.get()?.route)
+			return;
 		
 		if (!document.startViewTransition) {
 			openPage(router, route);
