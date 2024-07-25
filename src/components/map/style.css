@@ -4,6 +4,8 @@
 	flex-direction: column-reverse;
 	align-items: flex-end;
 
+	height: 100%;
+
 	--icon-color: var(--text-color);
 	--error-color: rgb(255, 0, 0);
 	--loading-color: var(--text-color);
@@ -90,13 +92,20 @@
 		}
 
 		& a {
-			width: 41px;
+			width: 40px;
 			height: 40px;
 			line-height: 40px;
 
 			color: var(--icon-color);
 			background-color: var(--nav-background-color);
 			border-bottom: 1px solid var(--icon-color);
+
+			-webkit-tap-highlight-color: transparent;
+			cursor: pointer;
+
+			&:active{
+				color: var(--zone-a-color);
+			}
 		}
 	}
 
