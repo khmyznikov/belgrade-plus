@@ -95,7 +95,7 @@ export class MapEmbed extends LitElement {
   }
 
   render() {
-    return html` <article id="map" data-theme=${getThemeMode()} part="map">
+    return html` <article id="map" data-theme=${getThemeMode()}>
       <button type="button" id="locate" title="locate" @click=${this.findMe} .disabled=${this.locationStatus == 'loading'} class=${this.locationStatus} > 
         <svg viewBox="0 0 16 16" id="pin_point">
           <use href="${logo}#pin_point"></use>
