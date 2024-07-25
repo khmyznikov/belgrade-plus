@@ -76,18 +76,20 @@ export class CoreRoot extends LitElement {
 		
 		if (!document.startViewTransition) {
 			openPage(router, route);
-			return;
 		}
 		else {
-	
-			await document.startViewTransition({
-				// @ts-ignore
-				update: async () => { 
-					openPage(router, route);
-					await this.updateComplete; 
-				},
-				types: [route == "map" || (route == "home" && router.get()?.route === 'settings' ) ? 'backwards' : 'forwards']
-			});
+			try {
+				await document.startViewTransition({
+					// @ts-ignore
+					update: async () => { 
+						openPage(router, route);
+						await this.updateComplete; 
+					},
+					types: [route == "map" || (route == "home" && router.get()?.route === 'settings' ) ? 'backwards' : 'forwards']
+				});
+			} catch (error) {
+				openPage(router, route);
+			}
 		}
 		TrackPage(route);
 	}
